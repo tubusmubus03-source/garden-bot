@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Професійний Садовий Інструмент | Знижки до -40%</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1579006016495944');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1579006016495944&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -65,7 +82,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <i class="fa-solid fa-leaf text-brand-500 text-3xl"></i>
+                    <img src="./img/logo.png" alt="GardenPro Logo" class="h-10 w-10 object-contain">
                     <span class="font-black text-2xl tracking-tight text-dark uppercase">GARDEN<span class="text-brand-500">PRO</span></span>
                 </div>
                 
@@ -536,23 +553,41 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
-            <div>
-                <div class="font-bold text-white text-xl mb-2 uppercase">GARDEN<span class="text-brand-500">PRO</span></div>
-                <p class="text-sm">Інтернет-магазин професійного садового інструменту.</p>
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-10 text-center md:text-left">
+                <div>
+                    <div class="font-bold text-white text-xl mb-4 uppercase">GARDEN<span class="text-brand-500">PRO</span></div>
+                    <p class="text-sm leading-relaxed">Інтернет-магазин професійного садового інструменту. Працюємо для вашого саду з 2020 року.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Контакти та Адреса</h4>
+                    <p class="text-sm mb-2"><i class="fa-solid fa-location-dot mr-2 text-brand-500"></i> Київ, вул. Васильківська 109, оф. 35</p>
+                    <p class="text-sm mb-4"><i class="fa-solid fa-clock mr-2 text-brand-500"></i> Щодня з 09:00 до 20:00</p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="https://t.me/buyhunter1_bot" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-viber"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Юридична інформація</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="policy.html" class="hover:text-white transition-colors">Політика конфіденційності</a></li>
+                        <li><a href="offer.html" class="hover:text-white transition-colors">Публічна оферта</a></li>
+                        <li><a href="offer.html" class="hover:text-white transition-colors">Доставка та оплата</a></li>
+                        <li><a href="offer.html" class="hover:text-white transition-colors">Повернення та обмін</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex gap-4">
-                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-telegram"></i></a>
-                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-viber"></i></a>
-                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <div class="text-sm text-right">
-                <p>Щодня з 09:00 до 20:00</p>
-                <p>© 2026 GardenPro. Всі права захищені.</p>
+            
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                <p>© 2026 GardenPro. Всі права захищені. Використання матеріалів сайту без дозволу заборонено.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- JS Scripts -->
     <script>

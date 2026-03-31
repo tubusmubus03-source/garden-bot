@@ -2,3 +2,11 @@ node_modules/
 users.json
 url_content.html
 .DS_Store
+.*.html
+*_tmp.html
+!index.html
+!nabor.html
+!offer.html
+!policy.html
+!sekator.html
+!thanks.html
