@@ -85,7 +85,7 @@ bot.onText(/\/start( (.+))?/, (msg, match) => {
         }
 
     } else if (payload === 'nabor') {
-        const photoPath = path.join(__dirname, 'img', 'nabor', '29825413166863.webp');
+        const photoPath = path.join(__dirname, 'img', 'nabor', '1281.jpg');
 
         const captionText = `
 🧰 <b>Набір інструментів PRO 216 предметів</b>
