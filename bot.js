@@ -1,6 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
 const path = require('path');
 const fs = require('fs');
+const axios = require('axios');
+const phpSerialize = require('php-serialize');
+
 
 // Вставте сюди токен вашого бота з BotFather (той самий, що в telegram.js)
 const token = '8735519028:AAF0JXwIm3gS4JftOo7gXPvvQ4jUOzjEkto';
@@ -236,8 +239,59 @@ bot.on('message', (msg) => {
         const userName = msg.from.first_name || "Клієнт";
         const productName = pendingOrders[chatId] || 'Невідомий товар';
         delete pendingOrders[chatId];
+        
+        // Відправляємо в адмінський чат Telegram
         bot.sendMessage(adminChatId, `🔥 <b>ЗАМОВЛЕННЯ З TELEGRAM БОТА</b>\nТовар: ${productName}\nІм'я: ${userName}\nТелефон: ${msg.contact.phone_number}`, { parse_mode: 'HTML' });
         
+        // --- Відправляємо в LP-CRM ---
+        let crmProductId = 397; // За замовчуванням (або секатор)
+        let crmProductPrice = 1349;
+
+        if (productName.includes('Секатор')) {
+            crmProductId = 397;
+            crmProductPrice = 1349;
+        } else if (productName.includes('Набір')) {
+            crmProductId = 1; // ТИМЧАСОВИЙ ID ДЛЯ НАБОРУ (треба змінити на правильний з CRM)
+            crmProductPrice = 2290;
+        }
+
+        const productsList = {
+            0: {
+                product_id: crmProductId,
+                price: crmProductPrice,
+                count: '1'
+            }
+        };
+
+        const crmData = {
+            key: 'ea26c2cbc26a264dd6529b0c25410bc1',
+            order_id: Math.floor(Date.now() / 10).toString(),
+            country: 'UA',
+            office: '38',
+            products: phpSerialize.serialize(productsList),
+            bayer_name: userName,
+            phone: msg.contact.phone_number,
+            comment: '🔥 Замовлення з Telegram Бота. ' + productName,
+            delivery: '1',
+            payment: '4'
+        };
+
+        const formData = Object.keys(crmData)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(crmData[key]))
+            .join('&');
+
+        axios.post('http://wildsub.lp-crm.biz/api/addNewOrder.html', formData, {
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        })
+        .then(response => {
+            console.log('Замовлення успішно відправлено в LP-CRM:', response.data);
+            bot.sendMessage(adminChatId, `✅ <i>Замовлення успішно додано в LP-CRM</i>`, { parse_mode: 'HTML' });
+        })
+        .catch(error => {
+            console.error('Помилка відправки в LP-CRM:', error);
+            bot.sendMessage(adminChatId, `❌ <b>Помилка відправки в LP-CRM:</b> ${error.message}`, { parse_mode: 'HTML' });
+        });
+
         return;
     }
 

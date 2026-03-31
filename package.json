@@ -12,6 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "node-telegram-bot-api": "^0.67.0"
+    "axios": "^1.14.0",
+    "node-telegram-bot-api": "^0.67.0",
+    "php-serialize": "^5.1.3"
   }
 }
