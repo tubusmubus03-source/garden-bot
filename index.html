@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Професійний Садовий Інструмент | Знижки до -40%</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            900: '#7c2d12',
+                        },
+                        dark: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .hero-bg {
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.7)), url('./img/hero.png') center/cover no-repeat;
+        }
+        /* Приховування скролбару для красивої каруселі відгуків на мобільних */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .pulse-btn {
+            animation: pulse-orange 2s infinite;
+        }
+        @keyframes pulse-orange {
+            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        }
+        @keyframes fade-in-down {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fade-in-down 0.3s ease-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pt-20">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 left-0 z-50 glass border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-leaf text-brand-500 text-3xl"></i>
+                    <span class="font-black text-2xl tracking-tight text-dark uppercase">GARDEN<span class="text-brand-500">PRO</span></span>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex gap-8 font-medium text-slate-600">
+                    <a href="#catalog" class="hover:text-brand-500 transition-colors">Інструменти</a>
+                    <a href="#trust" class="hover:text-brand-500 transition-colors">Гарантії</a>
+                    <a href="#reviews" class="hover:text-brand-500 transition-colors">Відгуки</a>
+                </nav>
+
+                <!-- Contacts & CTA -->
+                <div class="flex items-center gap-4 md:gap-6">
+                    <div class="flex flex-col items-end justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <a href="https://t.me/buyhunter1_bot?start=sekator" target="_blank" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#2AABEE] text-slate-600 hover:text-white flex items-center justify-center transition-colors" title="Написати в Telegram"><i class="fa-brands fa-telegram text-sm"></i></a>
+                            <a href="viber://chat?number=%2B380800123456" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#7360F2] text-slate-600 hover:text-white flex items-center justify-center transition-colors" title="Написати у Viber"><i class="fa-brands fa-viber text-sm"></i></a>
+                        </div>
+                        <span class="text-xs text-green-600 font-semibold flex items-center gap-1.5">
+                            <span class="relative flex h-2 w-2">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                            </span>
+                            Ми онлайн
+                        </span>
+                    </div>
+                    <a href="#order" class="hidden md:inline-flex bg-slate-100 hover:bg-slate-200 text-dark font-semibold px-5 py-2.5 rounded-lg transition-colors border border-slate-300 text-sm">
+                        <i class="fa-solid fa-phone mr-2 mt-0.5"></i> Передзвонити
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl z-40 md:hidden animate-fade-in-down">
+            <nav class="flex flex-col p-4 gap-1">
+                <a href="#catalog" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-brand-500">
+                    <i class="fa-solid fa-screwdriver-wrench w-6 text-brand-500"></i> Інструменти
+                </a>
+                <a href="#trust" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-brand-500">
+                    <i class="fa-solid fa-shield-halved w-6 text-brand-500"></i> Гарантії та довіра
+                </a>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-brand-500">
+                    <i class="fa-solid fa-comments w-6 text-brand-500"></i> Відгуки покупців
+                </a>
+                <a href="#order" onclick="toggleMobileMenu()" class="flex items-center gap-3 p-4 rounded-xl bg-brand-500 text-white font-bold transition-colors hover:bg-brand-600 mt-1">
+                    <i class="fa-solid fa-cart-shopping w-6"></i> Замовити зі знижкою
+                </a>
+                <div class="mt-4 pt-4 border-t border-slate-100">
+                    <a href="tel:+380000000000" class="flex items-center gap-3 p-4 rounded-xl bg-slate-50 text-brand-600 font-bold border border-slate-200">
+                        <i class="fa-solid fa-phone w-6"></i> 0 800 123 456
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative text-white py-24 md:py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-brand-500 text-white px-4 py-1.5 rounded-full font-bold text-sm mb-6 shadow-lg shadow-brand-500/30 uppercase tracking-wide">
+                <i class="fa-solid fa-fire"></i> Глобальний розпродаж -40%
+            </div>
+
+            <!-- Social Proof -->
+            <div class="flex flex-wrap items-center gap-3 mb-6 justify-center md:justify-start">
+                <div class="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5">
+                    <div class="flex text-yellow-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="font-bold text-white text-sm">4.8</span>
+                    <span class="text-slate-300 text-sm">(1&nbsp;245 відгуків)</span>
+                </div>
+                <div class="flex items-center gap-1.5 bg-green-500/20 border border-green-400/30 rounded-full px-4 py-1.5">
+                    <i class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+                    <span class="text-green-300 font-semibold text-sm">Перевірено покупцями</span>
+                </div>
+                <div class="flex items-center gap-1.5 bg-white/10 border border-white/20 rounded-full px-4 py-1.5">
+                    <i class="fa-solid fa-truck text-slate-300 text-sm"></i>
+                    <span class="text-slate-200 text-sm">Нова Пошта · 1-3 дні</span>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight max-w-4xl">
+                Професійний інструмент для <span class="text-brand-500">вашого саду</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl text-slate-200 mb-10 max-w-2xl font-light">
+                Виконуйте обрізку дерев та догляд за чагарниками <b>в 5 разів швидше</b> з нашими потужними акумуляторними рішеннями 48V.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 items-center md:justify-start">
+                <a href="#catalog" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/40 transition-transform hover:-translate-y-1 pulse-btn">
+                    Обрати інструмент <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <div class="text-sm text-slate-300 text-left flex items-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-2xl text-green-400"></i>
+                    <span>Оплата при отриманні<br>Гарантія 12 міс.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid (Каталог) -->
+    <section id="catalog" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Наші Бестселери</h2>
+                <div class="w-24 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600">Всі комплекти включають фірмовий кейс та по 2 потужних акумулятори.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Товар 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <a href="sekator.html" class="relative bg-slate-100 aspect-square flex items-center justify-center p-6 pb-0 overflow-hidden block">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-lg text-sm z-10">-40%</span>
+                        <!-- Імітація фото -->
+                        <img src="./img/pruner.png" alt="Секатор" class="w-full h-full object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="text-sm text-brand-500 font-bold mb-1">ХІТ ПРОДАЖІВ</div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Акумуляторний секатор PRO-48V</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6 flex-grow">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Зріз гілок до 30 мм</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Леза зі сталі SK5</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> До 4 годин роботи</li>
+                        </ul>
+                        <div class="flex items-end justify-between mb-6">
+                            <div>
+                                <div class="text-slate-400 line-through text-sm">3 499 грн</div>
+                                <div class="text-3xl font-black text-red-600">1 349 <span class="text-lg">грн</span></div>
+                            </div>
+                        </div>
+                        <a href="sekator.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
+                            Перейти до товару
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col relative transform md:-translate-y-4">
+                    <div class="absolute top-0 left-0 w-full bg-brand-500 text-white text-center py-1 text-xs font-bold uppercase tracking-wider z-20">Рекомендуємо</div>
+                    <a href="pila.html" class="relative bg-slate-100 aspect-square flex items-center justify-center p-6 pb-0 overflow-hidden mt-6 block">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-lg text-sm z-10">-35%</span>
+                        <img src="./img/saw.png" alt="Міні-пила" class="w-full h-full object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-dark mb-3">Ланцюгова міні-пила 6" дюймів</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6 flex-grow">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Потужний безщітковий мотор</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Автоматичне змащення ланцюга</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Ідеальна для товстих гілок</li>
+                        </ul>
+                        <div class="flex items-end justify-between mb-6">
+                            <div>
+                                <div class="text-slate-400 line-through text-sm">3 999 грн</div>
+                                <div class="text-3xl font-black text-red-600">2 599 <span class="text-lg">грн</span></div>
+                            </div>
+                        </div>
+                        <a href="pila.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
+                            Перейти до товару
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <a href="trimmer.html" class="relative bg-slate-100 aspect-square flex items-center justify-center p-6 pb-0 overflow-hidden block">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-lg text-sm z-10">-45%</span>
+                        <img src="https://images.unsplash.com/photo-1592651034057-074472d825ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Кущоріз" class="w-full h-full object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-dark mb-3">Універсальний кущоріз-ножиці</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6 flex-grow">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 2 насадки в комплекті</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Легка вага (всього 1.2 кг)</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Рівна стрижка кущів</li>
+                        </ul>
+                        <div class="flex items-end justify-between mb-6">
+                            <div>
+                                <div class="text-slate-400 line-through text-sm">2 899 грн</div>
+                                <div class="text-3xl font-black text-red-600">1 599 <span class="text-lg">грн</span></div>
+                            </div>
+                        </div>
+                        <a href="trimmer.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
+                            Перейти до товару
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Товар 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+                    <a href="nabor.html" class="relative bg-slate-100 aspect-square flex items-center justify-center p-6 pb-0 overflow-hidden block">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-lg text-sm z-10">-53%</span>
+                        <img src="./img/nabor/1281.jpg" alt="Інструменти" class="w-full h-full object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-dark mb-3">Набір інструментів PRO 216 шт.</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm mb-6 flex-grow">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Хромванадієва сталь</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Тріскачки, ключі, біти</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Підходить для авто/СТО</li>
+                        </ul>
+                        <div class="flex items-end justify-between mb-6">
+                            <div>
+                                <div class="text-slate-400 line-through text-sm">4 900 грн</div>
+                                <div class="text-3xl font-black text-red-600">2 290 <span class="text-lg">грн</span></div>
+                            </div>
+                        </div>
+                        <a href="nabor.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
+                            Перейти до товару
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Sections -->
+    <section class="py-10">
+        <!-- Деталі 1 -->
+        <div id="details-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-100">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 relative rounded-2xl overflow-hidden shadow-xl aspect-video lg:aspect-square bg-slate-200">
+                     <img src="./img/pruner.png" alt="Робота секатором" class="w-full h-full object-cover">
+                     <!-- Play button overlay placeholder -->
+                     <div class="absolute inset-0 flex items-center justify-center bg-dark/20 hover:bg-dark/10 transition-colors cursor-pointer">
+                         <div class="w-20 h-20 rounded-full bg-brand-500/90 flex items-center justify-center text-white text-2xl shadow-lg hover:scale-110 transition-transform">
+                             <i class="fa-solid fa-play ml-1"></i>
+                         </div>
+                     </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Електросекатор PRO-48V: Ідеальний зріз без зусиль</h2>
+                    <p class="text-slate-600 mb-8 text-lg">Забудьте про мозолі та втому рук. Наш акумуляторний секатор граючись справляється з гілками товщиною до 30 мм, залишаючи рівний і чистий зріз, який не шкодить дереву.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex items-start gap-4">
+                            <i class="fa-solid fa-bolt text-3xl text-brand-500"></i>
+                            <div>
+                                <div class="font-bold text-dark">Вольтаж</div>
+                                <div class="text-slate-500 text-sm">48V Потужність</div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex items-start gap-4">
+                            <i class="fa-solid fa-battery-full text-3xl text-brand-500"></i>
+                            <div>
+                                <div class="font-bold text-dark">2 АКБ</div>
+                                <div class="text-slate-500 text-sm">Li-Ion 2.0Ah</div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex items-start gap-4">
+                            <i class="fa-solid fa-scissors text-3xl text-brand-500"></i>
+                            <div>
+                                <div class="font-bold text-dark">Зріз до 30 мм</div>
+                                <div class="text-slate-500 text-sm">Сталь SK5</div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex items-start gap-4">
+                            <i class="fa-solid fa-briefcase text-3xl text-brand-500"></i>
+                            <div>
+                                <div class="font-bold text-dark">Комплектація</div>
+                                <div class="text-slate-500 text-sm">Кейс + Зарядка</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#order" class="inline-block bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-colors" onclick="selectProduct('pruner')">Замовити зі знижкою 40%</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Коротко інші деталі (Товар 2) -->
+        <div id="details-2" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-dark mb-6">Ланцюгова міні-пила 6": Швидкий розпил товстих гілок</h2>
+                    <p class="text-slate-600 mb-8 text-lg">Компактна, але неймовірно потужна. Легко пиляє колоди до 15 см у діаметрі. Ідеально підходить для заготівлі дров для мангала, обрізки старих дерев та будівельних робіт на дачі.</p>
+                    <ul class="space-y-4 text-slate-700 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> Високоякісний привідний ланцюг глушить вібрації.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> Захисний кожух проти стружки.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> Ергономічна ручка з антиковзним покриттям.</li>
+                    </ul>
+                    <a href="#order" class="inline-block bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-colors" onclick="selectProduct('saw')">Замовити зі знижкою 35%</a>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-video lg:aspect-square bg-slate-200">
+                     <img src="./img/saw.png" alt="Робота міні-пилою" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 4 -->
+        <div id="details-4" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-100">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-video lg:aspect-square bg-slate-200">
+                     <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Набір інструментів 216" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-dark mb-6">Професійний набір інструментів 216 предметів</h2>
+                    <p class="text-slate-600 mb-8 text-lg">Незамінний помічник як у професійній майстерні, так і в гаражі. Включає все необхідне для ремонту та техобслуговування авто.</p>
+                    <ul class="space-y-4 text-slate-700 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> Високоякісна хром-ванадієва сталь, стійка до корозії.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> Компактний ударостійкий чемодан для зберігання та транспортування.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> Повний спектр: головки 1/4", 3/8", 1/2", ключі, біти, карданчики.</li>
+                    </ul>
+                    <a href="#order" class="inline-block bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-colors" onclick="selectProduct('toolkit')">Замовити зі знижкою 30%</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section (Переваги) -->
+    <section id="trust" class="py-16 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
+                <div class="p-6">
+                    <i class="fa-solid fa-shield-halved text-5xl text-brand-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Офіційна Гарантія</h3>
+                    <p class="text-slate-400">Ми надаємо гарантію 12 місяців на весь інструмент. Сервісна підтримка 24/7.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-wallet text-5xl text-brand-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Оплата при Отриманні</h3>
+                    <p class="text-slate-400">Жодних передоплат. Ви оглядаєте та перевіряєте товар на пошті, тільки потім оплачуєте.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-rotate-left text-5xl text-brand-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Повернення та Обмін</h3>
+                    <p class="text-slate-400">Протягом 14 днів ви можете обміняти або повернути товар відповідно до закону.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Відгуки наших клієнтів</h2>
+                <div class="w-24 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Отзыв 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Олександр" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Олександр М.</div>
+                            <div class="text-brand-500 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 italic line-clamp-3 md:line-clamp-none transition-all duration-300">"Купив секатор дружині для троянд, у результаті сам обрізав весь сад за півдня. Дуже зручний, батарею тримає довго. Зріз гладкий, гілки 2-3 см бере на ура!"</p>
+                    <button onclick="toggleReview(this)" class="text-brand-500 font-bold text-[13px] md:hidden mt-2 outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+                </div>
+                <!-- Отзыв 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Ігор" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Ігор В.</div>
+                            <div class="text-brand-500 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 italic line-clamp-3 md:line-clamp-none transition-all duration-300">"Міні-пила перевершила всі очікування. Брав для розчищення старих яблунь на дачі. Потужності вистачає з головою. Комплектація топ - чемоданчик, 2 акуми. Дякую!"</p>
+                    <button onclick="toggleReview(this)" class="text-brand-500 font-bold text-[13px] md:hidden mt-2 outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+                </div>
+                <!-- Отзыв 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Олена" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Олена С.</div>
+                            <div class="text-brand-500 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 italic line-clamp-3 md:line-clamp-none transition-all duration-300">"Кущоріз дуже легкий. Я сама справляюся зі стрижкою туй у дворі. Насадки змінюються легко. Заряджається швидко. Задоволена покупкою."</p>
+                    <button onclick="toggleReview(this)" class="text-brand-500 font-bold text-[13px] md:hidden mt-2 outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section (Финальный оффер) -->
+    <section id="order" class="py-20 relative overflow-hidden bg-white">
+        <!-- Декор фон -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-50 blur-3xl opacity-50 z-0"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-slate-50 rounded-3xl shadow-xl border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                
+                <!-- Инфо и таймер -->
+                <div class="md:w-1/2 p-8 md:p-12 bg-dark text-white relative">
+                    <h2 class="text-3xl font-bold mb-4">Встигніть замовити за акцією!</h2>
+                    <p class="text-slate-300 mb-8">Залиште заявку зараз і зафіксуйте знижку до 40%. Кількість акційних наборів обмежена.</p>
+                    
+                    <div class="mb-4 text-sm text-brand-400 font-bold uppercase tracking-wider">До кінця акції залишилося:</div>
+                    <div class="flex gap-4 mb-8">
+                        <div class="bg-slate-800 rounded-xl p-3 w-20 text-center border border-slate-700">
+                            <div id="hours" class="text-3xl font-black text-brand-500">02</div>
+                            <div class="text-xs text-slate-400 mt-1">ГОДИН</div>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-500 pt-3">:</div>
+                        <div class="bg-slate-800 rounded-xl p-3 w-20 text-center border border-slate-700">
+                            <div id="minutes" class="text-3xl font-black text-brand-500">45</div>
+                            <div class="text-xs text-slate-400 mt-1">ХВИЛИН</div>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-500 pt-3">:</div>
+                        <div class="bg-slate-800 rounded-xl p-3 w-20 text-center border border-slate-700">
+                            <div id="seconds" class="text-3xl font-black text-brand-500">12</div>
+                            <div class="text-xs text-slate-400 mt-1">СЕКУНД</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div class="md:w-1/2 p-8 md:p-12 bg-white">
+                    <form onsubmit="sendOrderToTelegram(event, document.getElementById('product-select').options[document.getElementById('product-select').selectedIndex].text)" class="space-y-5">
+                        <h3 class="text-xl font-bold text-dark mb-6">Оформлення замовлення</h3>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Який інструмент вас цікавить?</label>
+                            <select id="product-select" name="product" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all cursor-pointer bg-slate-50 text-slate-800">
+                                <option value="pruner">Акумуляторний секатор PRO-48V (-40%)</option>
+                                <option value="saw">Ланцюгова міні-пила 6" (-35%)</option>
+                                <option value="trimmer">Універсальний кущоріз-ножиці (-45%)</option>
+                                <option value="toolkit">Професійний набір інструментів 216 шт. (-30%)</option>
+                                <option value="cons">Потрібна консультація менеджера</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="text" name="name" required placeholder="Ваше Ім'я" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all placeholder-slate-400">
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" required placeholder="Ваш телефон (напр. 0501234567)" pattern="^(\+?380|0)[0-9]{9}$" title="Введіть правильний український номер, наприклад: 0501234567. Тільки цифри!" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all placeholder-slate-400">
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-1 mt-4">
+                            Оформити замовлення
+                        </button>
+                        
+                        <p class="text-xs text-center text-slate-400 mt-4">Натискаючи кнопку, ви даєте згоду на обробку персональних даних.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <div class="font-bold text-white text-xl mb-2 uppercase">GARDEN<span class="text-brand-500">PRO</span></div>
+                <p class="text-sm">Інтернет-магазин професійного садового інструменту.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-viber"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="text-sm text-right">
+                <p>Щодня з 09:00 до 20:00</p>
+                <p>© 2026 GardenPro. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script>
+        // Простой скрипт таймера
+        let time = 2 * 3600 + 45 * 60 + 12; // 2 hours, 45 minutes, 12 seconds
+        
+        function updateTimer() {
+            let h = Math.floor(time / 3600);
+            let m = Math.floor((time % 3600) / 60);
+            let s = time % 60;
+            
+            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+            
+            if(time > 0) {
+                time--;
+            }
+        }
+        setInterval(updateTimer, 1000);
+
+        // Авто-выбор товара в форме при клике на "Подробнее" или "Заказать"
+        function selectProduct(val) {
+            document.getElementById('product-select').value = val;
+        }
+
+        // Мобільне меню
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Плавний скролл при клике на ссылки
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if(target) {
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 w-full z-50 md:hidden transition-transform duration-300 translate-y-full">
+        <div class="bg-white border-t border-slate-200 shadow-2xl px-4 py-3 flex items-center gap-3">
+            <a href="tel:+380000000000" class="flex-shrink-0 flex flex-col items-center justify-center w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:bg-slate-200 transition-colors">
+                <i class="fa-solid fa-phone text-brand-500 text-lg"></i>
+                <span class="text-[9px] font-semibold text-slate-500 mt-0.5">Дзвінок</span>
+            </a>
+            <a href="#order" id="sticky-order-btn" class="flex-1 bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 rounded-xl text-center text-base shadow-lg shadow-brand-500/30 transition-all active:scale-95 pulse-btn">
+                🛒 Замовити зі знижкою
+            </a>
+        </div>
+        <!-- Safe area for phones with home indicator -->
+        <div class="bg-white h-safe-bottom" style="height: env(safe-area-inset-bottom, 0px);"></div>
+    </div>
+
+    <script src="./telegram.js"></script>
+    <script>
+        // Sticky CTA — show after scroll, hide when #order is visible
+        const stickyCta = document.getElementById('sticky-cta');
+        const orderSection = document.getElementById('order');
+
+        function updateStickyCta() {
+            if (!stickyCta || !orderSection) return;
+            const scrollY = window.pageYOffset;
+            const orderRect = orderSection.getBoundingClientRect();
+            const isOrderVisible = orderRect.top < window.innerHeight && orderRect.bottom > 0;
+
+            if (scrollY > 300 && !isOrderVisible) {
+                stickyCta.classList.remove('translate-y-full');
+            } else {
+                stickyCta.classList.add('translate-y-full');
+            }
+        }
+
+        window.addEventListener('scroll', updateStickyCta, { passive: true });
+        updateStickyCta();
+
+        // Функція для приховування/показу відгуків на мобільному
+        window.toggleReview = function(btn) {
+            const p = btn.previousElementSibling;
+            if (p.classList.contains('line-clamp-3')) {
+                p.classList.remove('line-clamp-3');
+                btn.innerHTML = 'Згорнути <i class="fa-solid fa-chevron-up text-[10px]"></i>';
+            } else {
+                p.classList.add('line-clamp-3');
+                btn.innerHTML = 'Читати ще <i class="fa-solid fa-chevron-down text-[10px]"></i>';
+            }
+        };
+    </script>
+</body>
+</html>

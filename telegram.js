@@ -62,7 +62,8 @@ async function sendOrderToTelegram(event, productName = "Невідомий то
 
             // Налаштовуємо ID/ціну товару
             let crmProductId = 397; 
-            let crmPrice = 1999;
+            let crmPrice = 1349;
+
 
 
             if (productName.toLowerCase().includes('набір') || productName.toLowerCase().includes('nabor')) {

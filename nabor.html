@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Професійний набір інструментів 216 предметів - купити</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .amazon-link {
+            color: #007185;
+        }
+
+        .amazon-link:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        .buy-box {
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+        }
+
+        .thumbnail {
+            border: 2px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .thumbnail.active {
+            border-color: #f97316 !important;
+            box-shadow: 0 0 0 1px #f97316;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes fade-in-down {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-down {
+            animation: fade-in-down 0.3s ease-out;
+        }
+    </style>
+</head>
+
+<body class="text-slate-900 pt-20">
+
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 left-0 z-50 glass border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+                    <i class="fa-solid fa-leaf text-orange-500 text-3xl"></i>
+                    <span class="font-black text-2xl tracking-tight text-slate-800 uppercase">GARDEN<span
+                            class="text-orange-500">PRO</span></span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex flex-nowrap items-center gap-5 xl:gap-8 font-medium text-slate-600">
+                    <a href="#description" class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Про
+                        товар</a>
+                    <a href="#video-review"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Відеоогляд</a>
+                    <a href="#specs"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Характеристики</a>
+                    <a href="#manufacturer"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Комплектація</a>
+                    <a href="#reviews"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Відгуки</a>
+                </nav>
+
+                <!-- Contacts & CTA -->
+                <div class="flex items-center gap-4 md:gap-6">
+                    <div class="flex flex-col items-end justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <a href="https://t.me/buyhunter1_bot?start=nabor" target="_blank"
+                                class="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#2AABEE] text-slate-600 hover:text-white flex items-center justify-center transition-colors"
+                                title="Написати в Telegram"><i class="fa-brands fa-telegram text-sm"></i></a>
+                            <a href="viber://chat?number=%2B380800123456"
+                                class="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#7360F2] text-slate-600 hover:text-white flex items-center justify-center transition-colors"
+                                title="Написати у Viber"><i class="fa-brands fa-viber text-sm"></i></a>
+                        </div>
+                        <span class="text-xs text-green-600 font-semibold flex items-center gap-1.5">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                            </span>
+                            Ми онлайн
+                        </span>
+                    </div>
+                    <a href="#buy-box"
+                        class="hidden md:inline-flex bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-5 py-2.5 rounded-lg transition-colors border border-slate-300 text-sm">
+                        <i class="fa-solid fa-phone mr-2 mt-0.5"></i> Передзвонити
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()"
+                        class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl z-40 lg:hidden animate-fade-in-down">
+            <nav class="flex flex-col p-4 gap-1">
+                <a href="#description" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-circle-info w-6 text-orange-500"></i> Про товар
+                </a>
+                <a href="#video-review" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-play w-6 text-orange-500"></i> Відеоогляд
+                </a>
+                <a href="#upsell" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-tags w-6 text-orange-500"></i> Знижки
+                </a>
+                <a href="#specs" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-list w-6 text-orange-500"></i> Характеристики
+                </a>
+                <a href="#manufacturer" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-box-open w-6 text-orange-500"></i> Комплектація
+                </a>
+                <a href="#reviews" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-star w-6 text-orange-500"></i> Відгуки
+                </a>
+                <a href="#faq" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-circle-question w-6 text-orange-500"></i> Часті питання
+                </a>
+                <a href="#buy-box" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl bg-orange-500 text-white font-bold hover:bg-orange-600 mt-1 transition-colors">
+                    <i class="fa-solid fa-cart-shopping w-6"></i> Замовити зараз
+                </a>
+                <div class="mt-4 pt-4 border-t border-slate-100">
+                    <a href="tel:0800123456"
+                        class="flex items-center gap-3 p-4 rounded-xl bg-slate-50 text-orange-600 font-bold border border-slate-200">
+                        <i class="fa-solid fa-phone w-6"></i> 0 800 123 456
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pt-6 md:pt-14 mt-4 md:mt-8" id="about"></div>
+
+    <!-- Основной блок товара (Above the fold) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div
+            class="bg-white p-6 lg:p-10 rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 shadow-sm border border-slate-100">
+
+            <!-- Левая колонка -->
+            <div class="flex flex-col gap-4">
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-sm group">
+                    <img id="main-image" src="./img/nabor/29825413166863.webp"
+                        class="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105 cursor-zoom-in">
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="flex gap-2 md:gap-3 overflow-x-auto pb-1 justify-between hide-scroll">
+                    <div class="thumbnail active w-[24%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/nabor/29825413166863.webp')">
+                        <img src="./img/nabor/29825413166863.webp" class="w-full h-16 md:h-20 object-cover">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight">
+                            Набір інструментів</div>
+                    </div>
+                    <div class="thumbnail w-[24%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/nabor/1281.jpg')">
+                        <img src="./img/nabor/1281.jpg" class="w-full h-16 md:h-20 object-cover">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight">
+                            Кейс</div>
+                    </div>
+                    <div class="thumbnail w-[24%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/nabor/likhtar-digital-light-kit-wxh-9019b-radio-65622708395982_+bd50b4158d.jpg')">
+                        <img src="./img/nabor/likhtar-digital-light-kit-wxh-9019b-radio-65622708395982_+bd50b4158d.jpg" class="w-full h-16 md:h-20 object-cover">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight">
+                            Ключі та тріскачки</div>
+                    </div>
+                    <div class="thumbnail w-[24%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/nabor/34719403164126.webp')">
+                        <img src="./img/nabor/34719403164126.webp" class="w-full h-16 md:h-20 object-cover">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight">
+                            2 АКБ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="flex flex-col">
+                <div class="mb-6">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="flex items-center text-orange-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#reviews"
+                            class="text-sm text-gray-500 hover:text-orange-500 underline decoration-dashed underline-offset-4 transition-colors">4.8
+                            (1,245 відгуків)</a>
+                        <span
+                            class="hidden sm:inline-block bg-slate-800 text-white text-[10px] uppercase tracking-wide font-bold px-2 py-0.5 rounded shadow-sm">Хіт
+                            продажу 2024</span>
+                    </div>
+                    <h1 class="text-3xl lg:text-4xl font-extrabold text-[#c2410b] mb-3 leading-tight uppercase font-sans tracking-tight">
+                        Ідеальний порядок та всі ключі під рукою.</h1>
+                    <h2 class="text-xl md:text-2xl font-bold text-black leading-tight">Набір інструментів 216 предметів – вибір
+                        професіоналів.</h2>
+                </div>
+
+                <!-- Features & Order Form Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start flex-grow">
+                    <!-- Left Sub-col: Features & Assortment -->
+                    <div class="flex flex-col h-full space-y-8">
+                        <div class="space-y-6 mt-2">
+                            <!-- Feature 1 -->
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 text-xl">
+                                    <i class="fa-solid fa-scissors"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-black leading-tight text-sm md:text-base">Зріз до 30 мм
+                                    </div>
+                                    <div class="text-xs md:text-sm text-gray-600">Високоточна заточка</div>
+                                </div>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 text-xl">
+                                    <i class="fa-solid fa-battery-full rotate-90"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-black leading-tight text-sm md:text-base">2 потужні АКБ
+                                        Li-Ion</div>
+                                    <div class="text-xs md:text-sm text-gray-600">Подвійний час роботи</div>
+                                </div>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 text-xl">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-black leading-tight text-sm md:text-base">До 6 годин
+                                        роботи</div>
+                                    <div class="text-xs md:text-sm text-gray-600">Надійна робота</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Compact Upsell (Replaced Assortment) -->
+                        <div id="upsell" class="mt-auto hidden md:block pt-4 border-t border-gray-100">
+                            <h4
+                                class="font-bold text-black mb-3 text-[11px] uppercase text-orange-600 tracking-wide flex items-center gap-1.5">
+                                <i class="fa-solid fa-gift"></i> Разом дешевше (Вигода)</h4>
+                            <div class="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="w-10 h-10 rounded bg-white border border-gray-200 p-0.5 shadow-sm"><img
+                                            src="./img/nabor/1281.jpg"
+                                            class="w-full h-full object-cover rounded-sm border border-gray-100"></div>
+                                    <i class="fa-solid fa-plus text-[10px] text-gray-400"></i>
+                                    <div class="w-10 h-10 rounded bg-white border border-gray-200 p-0.5 shadow-sm"><img
+                                            src="./img/saw.png" class="w-full h-full object-contain rounded-sm"></div>
+                                    <div class="ml-auto text-right">
+                                        <div
+                                            class="text-[10px] text-red-500 font-bold inline-block bg-red-50 px-1 rounded">
+                                            -200 ₴</div>
+                                        <div class="font-bold text-black text-base leading-tight mt-0.5">4 398 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="text-[11px] font-medium text-slate-700 leading-tight mb-2.5">Комплект:
+                                    Набір інструментів + Міні-пила 6"</div>
+                                <a href="#buy-box"
+                                    class="block w-full text-center bg-orange-100 hover:bg-orange-200 text-orange-800 border border-orange-300 text-[11px] font-bold py-2 rounded-md transition-colors shadow-sm uppercase tracking-wide">Обрати
+                                    набір</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sub-col: Price & Form -->
+                    <div class="flex flex-col h-full space-y-4">
+                        <!-- Price Row -->
+                        <div class="text-right">
+                            <div class="flex justify-end items-end gap-3 mb-1">
+                                <div
+                                    class="text-3xl md:text-4xl font-extrabold text-[#d97706] tracking-tight whitespace-nowrap">
+                                    2 290 <span class="text-xl md:text-2xl font-bold">грн</span></div>
+                                <div class="text-right pb-1">
+                                    <div
+                                        class="text-red-500 font-bold text-[10px] md:text-xs bg-red-50 border border-red-500 rounded px-1 animate-pulse">
+                                        -53%</div>
+                                    <div class="text-gray-400 line-through text-xs md:text-sm">4 900 грн</div>
+                                </div>
+                            </div>
+                            <div class="flex justify-end items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-green-500 animate-[pulse_2s_ease-in-out_infinite]">
+                                </div>
+                                <div class="text-slate-800 font-medium text-xs md:text-sm">Залишилося по акції: <span
+                                        class="font-bold text-red-600">14 шт</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Order Box -->
+                        <div id="buy-box"
+                            class="bg-[#f59e0b] rounded-2xl p-5 shadow-lg flex-grow flex flex-col justify-center scroll-mt-32">
+                            <h3 class="text-white font-bold text-center text-sm md:text-base mb-4 drop-shadow-sm">
+                                Оформити замовлення за 1 хвилину</h3>
+
+                            <form id="order-form-hero"
+                                onsubmit="sendOrderToTelegram(event, 'Професійний набір інструментів 216 предметів')"
+                                class="flex flex-col gap-3">
+                                <input type="text" name="name" placeholder="Ваше Ім'я" required
+                                    class="w-full px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white outline-none text-black text-sm shadow-inner transition-shadow">
+                                <input type="tel" name="phone" placeholder="Ваш Телефон (напр. 0501234567)" required pattern="^(\+?380|0)[0-9]{9}$" title="Введіть правильний український номер, наприклад: 0501234567. Тільки цифри!"
+                                    class="w-full px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white outline-none text-black text-sm shadow-inner transition-shadow">
+
+                                <div class="flex flex-col gap-2 mt-1">
+                                    <button type="submit"
+                                        class="w-full bg-black hover:bg-slate-900 text-[#ffb703] font-bold py-3.5 rounded-lg text-sm md:text-base uppercase transition-colors shadow-md border-b-4 border-slate-700 active:border-b-0 active:mt-1 active:mb-1 tracking-wide">
+                                        Купити зараз
+                                    </button>
+
+                                    <a href="https://t.me/buyhunter1_bot?start=nabor" target="_blank"
+                                        class="w-full bg-[#2AABEE] hover:bg-[#229ED9] text-white font-bold py-3.5 rounded-lg text-sm text-center shadow-md transition-colors border-b-4 border-[#1c8ec4] active:border-b-0 active:mt-1 active:mb-1 flex items-center justify-center gap-2">
+                                        <i class="fa-brands fa-telegram text-lg"></i> Замовити через Telegram
+                                    </a>
+                                </div>
+
+                                <div
+                                    class="mt-2 text-[10px] md:text-xs flex flex-col sm:flex-row sm:justify-between gap-1.5 font-medium text-orange-950">
+                                    <div class="flex items-center gap-1.5"><i
+                                            class="fa-solid fa-shield-halved text-black"></i> <span>Оплата при
+                                            отриманні</span></div>
+                                    <div class="flex items-center gap-1.5"><i
+                                            class="fa-solid fa-rotate-left text-black"></i> <span>Повернення 14
+                                            днів</span></div>
+                                </div>
+                            </form>
+
+                            <div id="success-msg-hero" class="hidden text-center text-white py-6">
+                                <div class="text-5xl mb-3 text-white"><i class="fa-solid fa-circle-check"></i></div>
+                                <div class="font-bold text-xl mb-1">Замовлення прийнято!</div>
+                                <div class="text-sm font-medium">Ми перетелефонуємо дуже швидко.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compact Upsell Mobile -->
+                <div class="mt-6 block md:hidden border-t border-gray-100 pt-6">
+                    <div class="flex justify-between items-center mb-4 px-1">
+                        <h4
+                            class="font-bold text-black text-[13px] uppercase text-orange-600 flex items-center gap-1.5 tracking-tight">
+                            <i class="fa-solid fa-gift"></i> Разом дешевше</h4>
+                        <span
+                            class="text-[10px] font-bold text-red-600 bg-red-50 border border-red-200 px-1.5 py-0.5 rounded shadow-sm">-200
+                            грн</span>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 shadow-sm flex flex-col gap-3">
+                        <div class="flex justify-center items-center gap-3">
+                            <div class="w-16 h-16 rounded-xl bg-white border border-gray-200 shadow-sm p-1"><img
+                                    src="./img/nabor/1281.jpg" class="w-full h-full object-cover"></div>
+                            <i class="fa-solid fa-plus text-gray-400"></i>
+                            <div class="w-16 h-16 rounded-xl bg-white border border-gray-200 shadow-sm p-1"><img
+                                    src="./img/saw.png" class="w-full h-full object-contain"></div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xs font-bold text-slate-800 line-clamp-2">Комплект: Набір інструментів-48V +
+                                Міні-пила 6"</div>
+                            <div class="flex justify-center items-baseline gap-2 mt-1">
+                                <span class="text-gray-400 line-through text-xs">4 598 ₴</span>
+                                <span class="font-extrabold text-black text-xl">4 398 ₴</span>
+                            </div>
+                        </div>
+                        <a href="#buy-box"
+                            class="block w-full border border-orange-500 bg-orange-50 hover:bg-orange-100 text-orange-700 text-center font-bold py-3 rounded-lg text-sm transition-colors uppercase tracking-wide">Обрати
+                            набір</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Блок 'Про цей товар' -->
+    <section id="description" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 mt-12 scroll-mt-32">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-orange-500 inline-block">Про цей
+                товар</h2>
+
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-orange-500 mt-1 flex-shrink-0"></i>
+                    <div><b>Міцність та надійність:</b> Всі елементи виготовлені з високоякісної хром-ванадієвої сталі (Cr-V). Інструменти витримують великі навантаження і не піддаються корозії.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-orange-500 mt-1 flex-shrink-0"></i>
+                    <div><b>Універсальність 216 предметів:</b> В наборі є абсолютно все: від дрібних біт для електроніки до масивних торцевих головок для складного ремонту авто або техніки.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-orange-500 mt-1 flex-shrink-0"></i>
+                    <div><b>Надійні тріскачки на 45 зубів:</b> Три тріскачки (1/2, 3/8, 1/4) гарантують плавний хід та дозволяють працювати у важкодоступних місцях, де звичайний ключ не пройде.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-orange-500 mt-1 flex-shrink-0"></i>
+                    <div><b>Зручне зберігання:</b> Кожен інструмент знаходиться на своєму штатному місці у міцному протиударному кейсі з надійними металевими застібками. Жодного хаосу у вашому багажнику або гаражі.</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Блок "До / Після" — Болі та Переваги -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+
+        <!-- Заголовок -->
+        <div class="text-center mb-10">
+            <span class="inline-block bg-orange-100 text-orange-700 font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">Чому це важливо</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Розсип ключів <span class="text-red-500">проти</span> Набору інструментів</h2>
+            <p class="text-slate-500 mt-2 text-sm md:text-base max-w-xl mx-auto">Порівняйте один раз — і ви зрозумієте, чому 1 245 автомобілістів вже зробили вибір</p>
+        </div>
+
+        <!-- Порівняльна картка -->
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl mb-10 border border-slate-100">
+
+            <!-- ЛІВО: Болі -->
+            <div class="bg-slate-800 p-8 md:p-10">
+                <div class="flex items-center gap-3 mb-7">
+                    <div class="w-10 h-10 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
+                        <i class="fa-solid fa-ban text-red-400 text-base"></i>
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-white text-lg leading-tight">Звичайні ключі насипом</div>
+                        <div class="text-slate-400 text-xs">хаос у гаражі</div>
+                    </div>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/15 flex items-center justify-center mt-0.5"><i class="fa-solid fa-x text-red-400 text-[10px]"></i></span>
+                        <span class="text-slate-300 text-sm leading-relaxed"><b class="text-white">Постійно губляться</b> — знайти потрібний розмір займає більше часу, ніж сам ремонт</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/15 flex items-center justify-center mt-0.5"><i class="fa-solid fa-x text-red-400 text-[10px]"></i></span>
+                        <span class="text-slate-300 text-sm leading-relaxed"><b class="text-white">Немає чим підлізти</b> — звичайним ріжковим ключем буває неможливо дістатися до болта</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/15 flex items-center justify-center mt-0.5"><i class="fa-solid fa-x text-red-400 text-[10px]"></i></span>
+                        <span class="text-slate-300 text-sm leading-relaxed"><b class="text-white">Злизуються грані</b> — дешеві ключі псують болти, додаючи проблем під час ремонту</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ПРАВО: Переваги -->
+            <div class="bg-gradient-to-br from-orange-500 to-amber-500 p-8 md:p-10 relative overflow-hidden">
+                <!-- Декоративне коло -->
+                <div class="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-white/10 pointer-events-none"></div>
+                <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-white/5 pointer-events-none"></div>
+
+                <div class="flex items-center gap-3 mb-7 relative">
+                    <div class="w-10 h-10 rounded-full bg-white/20 border border-white/30 flex items-center justify-center"><i class="fa-solid fa-toolbox text-white text-base"></i></div>
+                    <div>
+                        <div class="font-extrabold text-white text-lg leading-tight">Набір PRO 216</div>
+                        <div class="text-orange-100 text-xs">все під рукою</div>
+                    </div>
+                </div>
+                <ul class="space-y-4 relative">
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/25 flex items-center justify-center mt-0.5"><i class="fa-solid fa-check text-white text-[10px]"></i></span>
+                        <span class="text-orange-50 text-sm leading-relaxed"><b class="text-white">Повний порядок.</b> Всі інструменти жорстко зафіксовані в кейсі — завжди знайдете що потрібно</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/25 flex items-center justify-center mt-0.5"><i class="fa-solid fa-check text-white text-[10px]"></i></span>
+                        <span class="text-orange-50 text-sm leading-relaxed"><b class="text-white">Легкий доступ.</b> Тріскачки та кардани дозволяють дістати будь-яке кріплення під різним кутом</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/25 flex items-center justify-center mt-0.5"><i class="fa-solid fa-check text-white text-[10px]"></i></span>
+                        <span class="text-orange-50 text-sm leading-relaxed"><b class="text-white">Міцна Cr-V сталь.</b> Головки витримують великий крутний момент та не ушкоджують кріплення</span>
+                    </li>
+                </ul>
+                <a href="#buy-box"
+                    class="mt-8 inline-flex items-center gap-2 bg-white text-orange-600 font-extrabold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm relative">
+                    Хочу такий <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 5 карточок-вигід -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div
+                class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-clock text-blue-500 text-xl"></i>
+                </div>
+                <div class="font-bold text-slate-800 text-sm mb-1">Економія часу</div>
+                <div class="text-slate-500 text-xs">Більше роботи за менший час</div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-boxes-stacked text-green-500 text-xl"></i>
+                </div>
+                <div class="font-bold text-slate-800 text-sm mb-1">Порядок у всьому</div>
+                <div class="text-slate-500 text-xs">Кожен ключ на своєму місці</div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-clock text-orange-500 text-xl"></i>
+                </div>
+                <div class="font-bold text-slate-800 text-sm mb-1">Економія часу</div>
+                <div class="text-slate-500 text-xs">Все необхідне завжди під рукою</div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-car text-purple-500 text-xl"></i>
+                </div>
+                <div class="font-bold text-slate-800 text-sm mb-1">Універсальність</div>
+                <div class="text-slate-500 text-xs">Для авто, мото, дому та СТО</div>
+            </div>
+            <div class="col-span-2 md:col-span-1 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-yellow-50 flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-hammer text-yellow-500 text-xl"></i>
+                </div>
+                <div class="font-bold text-slate-800 text-sm mb-1">Професійна якість</div>
+                <div class="text-slate-500 text-xs">Витримує великі навантаження</div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- С этим товаром часто покупают (Апселл) -->
+    <!-- Детальні технічні характеристики (Стиль Розетки) -->
+    <section id="specs" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-mt-32">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Характеристики Професійний набір інструментів 216 предметів</h2>
+
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-slate-100">
+            <!-- Група 1: Основні -->
+            <div class="mb-10 last:mb-0">
+                <h3 class="text-xl font-bold text-slate-900 mb-5 pb-2 border-b-2 border-orange-500 inline-block">Основні характеристики</h3>
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0">
+                        <div class="text-slate-500 text-sm md:text-base sm:w-1/2 md:w-5/12 whitespace-nowrap relative">
+                            Матеріал
+                            <span class="hidden sm:block absolute right-2 left-[80px] bottom-1 border-b border-dotted border-slate-300"></span>
+                        </div>
+                        <div class="text-slate-900 font-medium text-sm md:text-base sm:w-1/2 md:w-7/12 pl-0 sm:pl-2">
+                            Хром-ванадієва сталь
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0">
+                        <div class="text-slate-500 text-sm md:text-base sm:w-1/2 md:w-5/12 whitespace-nowrap relative">
+                            Кількість предметів
+                            <span class="hidden sm:block absolute right-2 left-[150px] bottom-1 border-b border-dotted border-slate-300"></span>
+                        </div>
+                        <div class="text-slate-900 font-medium text-sm md:text-base sm:w-1/2 md:w-7/12 pl-0 sm:pl-2">
+                            216 шт
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0">
+                        <div class="text-slate-500 text-sm md:text-base sm:w-1/2 md:w-5/12 whitespace-nowrap relative">
+                            Розміри упаковки
+                            <span class="hidden sm:block absolute right-2 left-[135px] bottom-1 border-b border-dotted border-slate-300"></span>
+                        </div>
+                        <div class="text-slate-900 font-medium text-sm md:text-base sm:w-1/2 md:w-7/12 pl-0 sm:pl-2">
+                            45х35х10 см
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0">
+                        <div class="text-slate-500 text-sm md:text-base sm:w-1/2 md:w-5/12 whitespace-nowrap relative">
+                            Вага упаковки
+                            <span class="hidden sm:block absolute right-2 left-[115px] bottom-1 border-b border-dotted border-slate-300"></span>
+                        </div>
+                        <div class="text-slate-900 font-medium text-sm md:text-base sm:w-1/2 md:w-7/12 pl-0 sm:pl-2">
+                            15 кг
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-200">
+                <a href="#buy-box" class="text-blue-600 hover:text-orange-500 text-sm font-medium flex items-center gap-1 transition-colors"><i class="fa-solid fa-arrow-up"></i> Купити зі знижкою</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Опис товару від виробника (A+ Content) -->
+    <section id="manufacturer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 scroll-mt-32">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-bold text-[#c2410b] mb-12 text-center drop-shadow-sm">Опис продукту від виробника
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
+                <!-- Ліва колонка -->
+                <div class="flex flex-col justify-between h-full">
+
+                    <!-- Комплектація -->
+                    <div class="mb-10 lg:mb-0">
+                        <h3 class="text-xl md:text-2xl font-bold text-black mb-5">Вміст та комплектація</h3>
+                        <ul class="space-y-3 text-black text-sm md:text-base">
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl leading-none font-bold mt-0.5">•</span>
+                                <div><b>Головки торцеві:</b> 1/2", 1/4", 3/8", включаючи довгі та E-профіль</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl leading-none font-bold mt-0.5">•</span>
+                                <div><b>Ключі:</b> комбіновані (8-22 мм) та шестигранні (1.27-5 мм)</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl leading-none font-bold mt-0.5">•</span>
+                                <div><b>Біти та насадки:</b> HEX, TORX, TORX TAMPER, PH, PZ, SPLINE (разом понад 74 шт)</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl leading-none font-bold mt-0.5">•</span>
+                                <div><b>Додатково:</b> Тріскачки 45T, кардани, подовжувачі, воротки та адаптери</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Комплектация -->
+                    <div class="mt-8 lg:mt-auto">
+                        <h3 class="text-xl font-bold text-black mb-4 text-center">Комплектація</h3>
+                        <div class="grid grid-cols-2 gap-3 p-3 border border-gray-100 shadow-sm rounded-xl">
+                            <!-- Блок 1 -->
+                            <div class="border border-gray-200 rounded-xl p-3 flex flex-col items-center gap-2 bg-white hover:shadow-md transition-shadow">
+                                <div class="w-full h-28 flex items-center justify-center overflow-hidden rounded-lg bg-gray-50">
+                                    <img src="./img/nabor/1281.jpg" alt="Ключі та головки" class="h-full w-full object-contain">
+                                </div>
+                                <span class="text-xs md:text-sm font-semibold text-slate-800 text-center">Ключі та головки</span>
+                            </div>
+                            <!-- Блок 2 -->
+                            <div class="border border-gray-200 rounded-xl p-3 flex flex-col items-center gap-2 bg-white hover:shadow-md transition-shadow">
+                                <div class="w-full h-28 flex items-center justify-center overflow-hidden rounded-lg bg-gray-50">
+                                    <img src="./img/nabor/34719403164126.webp" alt="Тріскачки" class="h-full w-full object-cover rounded-lg">
+                                </div>
+                                <span class="text-xs md:text-sm font-semibold text-slate-800 text-center">Тріскачки 45T</span>
+                            </div>
+                            <!-- Блок 3 -->
+                            <div class="border border-gray-200 rounded-xl p-3 flex flex-col items-center gap-2 bg-white hover:shadow-md transition-shadow">
+                                <div class="w-full h-28 flex items-center justify-center overflow-hidden rounded-lg bg-gray-50">
+                                    <img src="./img/nabor/likhtar-digital-light-kit-wxh-9019b-radio-65622708395982_+bd50b4158d.jpg" alt="Біти та насадки" class="h-full w-full object-contain">
+                                </div>
+                                <span class="text-xs md:text-sm font-semibold text-slate-800 text-center">Біти та насадки</span>
+                            </div>
+                            <!-- Блок 4 -->
+                            <div class="border border-gray-200 rounded-xl p-3 flex flex-col items-center gap-2 bg-white hover:shadow-md transition-shadow">
+                                <div class="w-full h-28 flex items-center justify-center overflow-hidden rounded-lg bg-gray-50">
+                                    <img src="./img/nabor/29825413166863.webp" alt="Міцний кейс" class="h-full w-full object-contain">
+                                </div>
+                                <span class="text-xs md:text-sm font-semibold text-slate-800 text-center">Міцний кейс</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Правая колонка -->
+                <div class="flex flex-col justify-between h-full">
+
+                    <!-- Большая картинка Before/After -->
+                    <div class="mb-10 lg:mb-0">
+                        <img src="./img/nabor/1281.jpg" alt="Порівняння роботи"
+                            class="w-full h-[300px] object-cover rounded-xl shadow-sm border border-gray-200 hover:scale-[1.02] transition-transform">
+                        <p class="text-[10px] text-center text-gray-400 mt-2 uppercase tracking-wide">Демонстрація
+                            роботи набір</p>
+                    </div>
+
+                    <!-- Гарантия и надежность -->
+                    <div class="mt-8 lg:mt-auto">
+                        <h3 class="text-xl md:text-2xl font-bold text-black mb-5">Гарантія та надійність</h3>
+                        <ul class="space-y-3 text-black text-sm md:text-base mb-8">
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl font-bold leading-none mt-0.5">•</span>
+                                <div>12 місяців гарантії</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl font-bold leading-none mt-0.5">•</span>
+                                <div>Сертифіковані сервісні центри</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-black text-xl font-bold leading-none mt-0.5">•</span>
+                                <div>Запасні леза в наявності</div>
+                            </li>
+                        </ul>
+
+                        <!-- Кнопки -->
+                        <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                            <a href="#buy-box"
+                                class="w-full sm:w-[45%] bg-[#ffb703] hover:bg-[#fb8500] text-black font-bold py-3.5 rounded-lg text-sm text-center shadow-sm transition-colors">Купити
+                                зараз</a>
+                            <a href="#specs"
+                                class="w-full sm:w-[55%] bg-[#1a1a1a] hover:bg-black text-white font-bold py-3.5 rounded-lg text-sm text-center shadow-sm transition-colors border border-black">Перейти
+                                до характеристик</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ (Частые вопросы) -->
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 scroll-mt-32">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center">Часті запитання</h2>
+
+        <div class="space-y-4">
+            <details class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Для чого підходить цей набір інструментів?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Цей професійний набір на 216 предметів ідеально підходить для ремонту та технічного обслуговування автомобілів, мотоциклів, велосипедів, а також для широкого спектру робіт по дому чи у слюсарній майстерні. Він включає все необхідне майстру.
+                </div>
+            </details>
+
+            <details class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    З якого матеріалу виготовлені інструменти?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Всі ключі, головки та тріскачки виготовлені з високоякісної хром-ванадієвої сталі (Cr-V). Цей сплав забезпечує інструментам надзвичайну міцність, стійкість до зношування та захист від корозії.
+                </div>
+            </details>
+
+            <details class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Надійний кейс для транспортування?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Набір постачається в міцному ударостійкому пластиковому кейсі. Кожен інструмент має своє чітке посадкове місце, що виключає їх змішування або випадіння під час транспортування на авто.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Відгуки клієнтів (Стиль маркетплейсів) -->
+    <section id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 scroll-mt-32">
+        <div class="bg-white p-6 rounded-lg shadow-sm grid grid-cols-1 md:grid-cols-12 gap-10">
+            <!-- Левая колонка: Статистика -->
+            <div class="md:col-span-4 lg:col-span-3">
+                <h2 class="text-xl font-bold text-slate-800 mb-2">Відгуки клієнтів</h2>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="text-orange-400 text-xl"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <div class="text-lg font-medium text-slate-800">4.8 з 5</div>
+                </div>
+                <div class="text-sm text-slate-500 mb-6">1,245 глобальних оцінок</div>
+
+                <!-- Прогресс-бары -->
+                <div class="space-y-2 text-sm text-amazon-link mb-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">5 зірок</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 84%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">84%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">4 зірки</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 10%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">10%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">3 зірки</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 4%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">4%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">2 зірки</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 1%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">1%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">1 зірка</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 1%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">1%</span>
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <h3 class="font-bold text-slate-800 mb-2">Бажаєте залишити відгук?</h3>
+                <p class="text-xs text-slate-500 mb-4">Поділіться своїми враженнями з іншими покупцями</p>
+                <button onclick="openReviewModal()"
+                    class="w-full bg-white border border-gray-300 hover:bg-gray-50 text-slate-800 font-medium py-1.5 rounded-full shadow-sm text-sm transition-colors">Написати
+                    відгук</button>
+            </div>
+
+            <!-- Правая колонка: Тексты отзывов -->
+            <div class="md:col-span-8 lg:col-span-9">
+                <!-- Галерея фото клиентов -->
+                <div class="mb-8">
+                    <h3 class="font-bold text-slate-800 mb-3 text-sm">Фотографії клієнтів</h3>
+                    <div class="flex gap-2 overflow-x-auto pb-2">
+                        <img src="./img/nabor/1281.jpg" class="w-24 h-24 object-cover cursor-pointer hover:opacity-80">
+                        <img src="./img/nabor/29825413166863.webp" class="w-24 h-24 object-cover cursor-pointer hover:opacity-80">
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-slate-800 text-lg mb-6">Топові відгуки з України</h3>
+
+                <div id="new-reviews-container"></div>
+                <!-- Ревью 1 -->
+                <div class="mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i
+                                class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Валерій Григорович</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Чудовий набір! Є всі необхідні ключі.</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 14 Квітня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Купував цей набір для ремонту авто в гаражі. Чесно кажучи, не очікував такої хорошої якості за ці гроші. Голівки і ключі зроблені з хорошого металу, не "злизуються" при навантаженні. Дуже порадував міцний кейс - все акуратно складено і кожен елемент міцно тримається на своєму місці.</p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i
+                            class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    <div class="text-xs text-slate-500 mb-3">12 людям цей відгук виявився корисним</div>
+                    <div class="flex gap-3">
+                        <button
+                            class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно</button>
+                        <button class="text-slate-400 text-xs text-left">Повідомити про порушення</button>
+                    </div>
+                </div>
+
+                <!-- Ревью 2 -->
+                <div class="mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i
+                                class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Анна та Максим</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Гарний інструмент, але кейс трохи тугий</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 2 Березня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p
+                        class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Ключі зроблені добротно, хром-ванадій, як і заявлено. Купувала чоловікові на подарунок у машину, він дуже
+                        задоволений. Єдиний маленький мінус - деякі головки дуже туго дістаються з посадкових місць у новому кейсі, але чоловік каже, що з часом розробиться. Загалом набором задоволені!</p>
+                    <button onclick="toggleReview(this)"
+                        class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i
+                            class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    <div class="flex gap-3 mt-4">
+                        <button
+                            class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно</button>
+                    </div>
+                </div>
+
+                <!-- Ревью 3 -->
+                <div class="mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Олександр М.</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Чудова комплектація, зручний кейс</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 28 Березня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Отримав набір швидко, комплектація повністю відповідає опису на сайті - всі 216 предметів на місці. Тріскачки працюють плавно, без люфту, механізм на 45 зубів відчувається добре. Дякую магазину за сервіс та якісний товар.
+                    </p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    
+                    <div class="flex gap-2 mt-2 mb-4">
+                        <img src="./img/nabor/1281.jpg" alt="Фото покупця 1" class="w-24 h-24 object-cover rounded-md border border-gray-200 hover:scale-105 transition-transform cursor-pointer shadow-sm" onclick="window.open(this.src)">
+                    </div>
+
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно (4)</button>
+                    </div>
+                </div>
+
+                <!-- Ревью 4 -->
+                <div class="mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Богдан Т.</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Потужний і надійний помічник</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 22 Березня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Дійсно хороша річ для автомобіліста. Є абсолютно всі торцеві головки, що можуть знадобитися. Матеріал міцний, вже встиг протестувати на ремонті ходової - нічого не погнулося. Однозначно рекомендую всім, хто цінує свій час та самостійно ремонтує техніку!
+                    </p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+
+                    <div class="flex gap-2 mt-2 mb-4">
+                        <img src="./img/nabor/29825413166863.webp" alt="Фото покупця 2" class="w-24 h-24 object-cover rounded-md border border-gray-200 hover:scale-105 transition-transform cursor-pointer shadow-sm" onclick="window.open(this.src)">
+                    </div>
+
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно (7)</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 pt-10 pb-6 text-white text-sm">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold mb-4 text-base">Дізнайтеся про нас більше</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:underline">Про нас</a></li>
+                    <li><a href="#" class="hover:underline">Кар'єра</a></li>
+                    <li><a href="#" class="hover:underline">Прес-релізи</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-base">Купувати з нами</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:underline">Оплата і доставка</a></li>
+                    <li><a href="#" class="hover:underline">Повернення</a></li>
+                    <li><a href="#" class="hover:underline">Гарантія</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-base">Співпраця</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:underline">Стати партнером</a></li>
+                    <li><a href="#" class="hover:underline">Оптові ціни</a></li>
+                    <li><a href="#" class="hover:underline">Дропшипінг</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-base">Служба підтримки</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:underline">Зв'язатися з нами</a></li>
+                    <li><a href="#" class="hover:underline">Мій акаунт</a></li>
+                    <li><a href="#" class="hover:underline">Допомога</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-slate-500 pt-6 border-t border-slate-700">
+            <span class="font-bold text-lg tracking-tight uppercase text-white mb-2 block">GARDEN<span
+                    class="text-orange-500">PRO</span></span>
+            © 2018-2026, GardenPRO.com, Inc. Даний лендінг є демонстрацією роботи.
+        </div>
+    </footer>
+
+    <!-- Modal HTML -->
+    <div id="reviewModal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden p-6 relative">
+            <button onclick="closeReviewModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i
+                    class="fa-solid fa-xmark text-2xl"></i></button>
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">Написати відгук</h2>
+
+            <form id="reviewForm" onsubmit="submitReview(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Загальна оцінка</label>
+                    <div class="flex gap-2 text-3xl cursor-pointer">
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(1)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(2)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(3)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(4)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(5)"></i>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Представтесь</label>
+                    <input type="text" id="reviewName" required placeholder="Ваше Ім'я"
+                        class="w-full text-base p-3 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Ваш текст відгуку</label>
+                    <textarea id="reviewText" required rows="4" placeholder="Що вам сподобалося чи не сподобалося?"
+                        class="w-full text-base p-3 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Прикріпити фото (за бажанням)</label>
+                    <div class="flex items-center gap-4">
+                        <div class="relative w-full border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-orange-500 transition-colors cursor-pointer bg-slate-50"
+                            onclick="document.getElementById('reviewImageInput').click()">
+                            <input type="file" id="reviewImageInput" accept="image/*" class="hidden">
+                            <i class="fa-solid fa-camera text-2xl text-gray-400 mb-2"></i>
+                            <div class="text-sm text-gray-500">Натисніть щоб обрати фото зі смартфона</div>
+                        </div>
+                        <div id="imagePreviewContainer"
+                            class="hidden relative w-32 h-32 border border-gray-200 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                            <img id="reviewImagePreview" src="" class="w-full h-full object-cover">
+                            <button type="button" onclick="removeImage(); event.stopPropagation();"
+                                class="absolute top-1 right-1 bg-black/50 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-black/70"><i
+                                    class="fa-solid fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-black text-base rounded-full py-3 shadow-md font-bold transition-transform hover:-translate-y-0.5">
+                    Опублікувати відгук
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- JS Functionality -->
+    <script>
+        function changeImage(element, src) {
+            document.getElementById('main-image').src = src;
+            document.querySelectorAll('.thumbnail').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Modal Logic
+        const modal = document.getElementById('reviewModal');
+        let currentRating = 5;
+
+        function openReviewModal() {
+            modal.classList.remove('hidden');
+        }
+        function closeReviewModal() {
+            modal.classList.add('hidden');
+        }
+        function setRating(stars) {
+            currentRating = stars;
+            const starElements = document.querySelectorAll('.star-btn');
+            starElements.forEach((el, index) => {
+                if (index < stars) {
+                    el.classList.remove('fa-regular', 'text-gray-300');
+                    el.classList.add('fa-solid', 'text-orange-400');
+                } else {
+                    el.classList.remove('fa-solid', 'text-orange-400');
+                    el.classList.add('fa-regular', 'text-gray-300');
+                }
+            });
+        }
+
+        let attachedImageSrc = null;
+        document.getElementById('reviewImageInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    attachedImageSrc = e.target.result;
+                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
+                    document.getElementById('reviewImagePreview').src = attachedImageSrc;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function removeImage() {
+            attachedImageSrc = null;
+            document.getElementById('reviewImageInput').value = '';
+            document.getElementById('imagePreviewContainer').classList.add('hidden');
+        }
+
+        function submitReview(event) {
+            event.preventDefault();
+            const text = document.getElementById('reviewText').value;
+            const name = document.getElementById('reviewName').value;
+
+            // Build stars HTML
+            let starsHtml = '';
+            for (let i = 0; i < 5; i++) {
+                if (i < currentRating) starsHtml += '<i class="fa-solid fa-star"></i>';
+                else starsHtml += '<i class="fa-regular fa-star"></i>';
+            }
+
+            let date = new Date().toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' });
+
+            // Build new review HTML
+            const newReview = `
+                <div class="mb-8 border-b pb-6 bg-orange-50/50 p-4 rounded-xl shadow-sm animate-[pulse_1s_ease-in-out]">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold">${name.charAt(0).toUpperCase()}</div>
+                        <span class="text-sm font-medium">${name}</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs">${starsHtml}</div>
+                        <span class="font-bold text-sm text-black">Новий відгук</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано ${date}</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Зареєстрований покупець</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">${text}</p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    ${attachedImageSrc ? `<img src="${attachedImageSrc}" class="w-32 h-32 object-cover rounded-md mb-3 border border-gray-200 cursor-pointer hover:scale-105 transition-transform" onclick="window.open('${attachedImageSrc}')">` : ''}
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 hover:bg-gray-50 text-slate-600 text-xs px-4 py-1.5 rounded-full shadow-sm">Корисно (0)</button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('new-reviews-container').insertAdjacentHTML('afterbegin', newReview);
+
+            // Format Reset & Close
+            document.getElementById('reviewForm').reset();
+            setRating(5);
+            removeImage();
+            closeReviewModal();
+
+            // Scroll to reviews
+            document.getElementById('reviews').scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Мобільне меню
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Плавний скролл при клике на ссылки – з урахуванням висоти фіксованого хедеру
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '' || targetId === 'javascript:void(0)') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Функція для приховування/показу відгуків на мобільному
+        window.toggleReview = function (btn) {
+            const p = btn.previousElementSibling;
+            if (p.classList.contains('line-clamp-3')) {
+                p.classList.remove('line-clamp-3');
+                btn.innerHTML = 'Згорнути <i class="fa-solid fa-chevron-up text-[10px] ml-0.5"></i>';
+            } else {
+                p.classList.add('line-clamp-3');
+                btn.innerHTML = 'Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i>';
+            }
+        };
+    </script>
+    <script src="./telegram.js"></script>
+</body>
+
+</html>

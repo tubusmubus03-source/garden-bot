@@ -249,7 +249,7 @@ bot.on('message', (msg) => {
 
         if (productName.includes('Секатор')) {
             crmProductId = 397;
-            crmProductPrice = 1999;
+            crmProductPrice = 1349;
         } else if (productName.includes('Набір')) {
             crmProductId = 1; // ТИМЧАСОВИЙ ID ДЛЯ НАБОРУ (треба змінити на правильний з CRM)
             crmProductPrice = 2290;
