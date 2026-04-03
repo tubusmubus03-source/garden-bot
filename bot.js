@@ -59,7 +59,7 @@ bot.onText(/\/start( (.+))?/, (msg, match) => {
         const captionText = `
 🔥 <b>Акумуляторний секатор GardenPRO 48V</b>
 
-💰 <b>Ціна:</b> 1 349 ₴ <s>3 400 ₴</s>
+💰 <b>Ціна:</b> 1 299 ₴ <s>3 400 ₴</s>
 🟢 Хіт продажу
 
 ✅ <b>Працює за вас:</b> Ріже міцні гілки як масло (до 30 мм). 
@@ -72,7 +72,7 @@ bot.onText(/\/start( (.+))?/, (msg, match) => {
             parse_mode: 'HTML',
             reply_markup: {
                 inline_keyboard: [
-                    [{ text: "🛒 Замовити (1 349 ₴)", callback_data: "order_sekator" }],
+                    [{ text: "🛒 Замовити (1 299 ₴)", callback_data: "order_sekator" }],
                     [
                         { text: "💬 Консультація", callback_data: "ask_question" },
                         { text: "🌐 Перейти на сайт", url: "https://osossis.fun/sekator.html" }
@@ -245,11 +245,11 @@ bot.on('message', (msg) => {
         
         // --- Відправляємо в LP-CRM ---
         let crmProductId = 397; // За замовчуванням (або секатор)
-        let crmProductPrice = 1349;
+        let crmProductPrice = 1299;
 
         if (productName.includes('Секатор')) {
             crmProductId = 397;
-            crmProductPrice = 1349;
+            crmProductPrice = 1299;
         } else if (productName.includes('Набір')) {
             crmProductId = 1; // ТИМЧАСОВИЙ ID ДЛЯ НАБОРУ (треба змінити на правильний з CRM)
             crmProductPrice = 2290;
