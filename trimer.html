@@ -6,7 +6,7 @@
     <meta charset="UTF-8"><link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Акумуляторна коса / Тример Procraft PTA25 (2 акб) - купити зі знижкою</title>
-    <meta name="description" content="Акумуляторна коса GardenPRO PTA25 — 40V, безщітковий двигун, 2 АКБ Li-Ion у комплекті. Доставка по Україні. Оплата при отриманні. Ціна 1995 грн зі знижкою -35%.">
+    <meta name="description" content="Акумуляторна коса Procraft PTA25 (2 акб) — ідеальне рішення для вашого саду. 2 АКБ у комплекті, багата комплектація (8 ножів, 6 котушок), легка вага. Доставка по Україні. Ціна 1995 грн.">
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <!-- Preload hero image for fast LCP -->
-    <link rel="preload" as="image" href="./img/trimer-pta25-banner.webp" imagesrcset="./img/trimer-pta25-banner-mobile.webp 800w, ./img/trimer-pta25-banner.webp 1600w" imagesizes="(max-width: 600px) 400px, 800px">
+    <link rel="preload" as="image" href="./img/trimer-pta25-banner.webp" imagesrcset="./img/trimer-pta25-banner-mobile.webp 800w, ./img/trimer-pta25-banner.webp 1600w" imagesizes="(max-width: 600px) 400px, 800px" fetchpriority="high">
     <!-- Compiled CSS (replaces Tailwind CDN 350KB JS) -->
     <style>/* ============================================
    GardenPRO — Compiled Tailwind CSS
@@ -31,11 +31,11 @@ a{color:inherit;text-decoration:inherit}
 b,strong{font-weight:bolder}
 button,input,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}
 button,select{text-transform:none}
-button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}
+button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;appearance:button;background-color:transparent;background-image:none}
 summary{display:list-item}
 menu,ol,ul{list-style:none;margin:0;padding:0}
-img,video{max-width:100%;height:auto;display:block;vertical-align:middle}
-audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}
+img,video{max-width:100%;height:auto;display:block}
+audio,canvas,embed,iframe,img,object,svg,video{display:block}
 input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}
 [role=button],button{cursor:pointer}
 :disabled{cursor:default}
@@ -61,14 +61,66 @@ body{font-family:ui-sans-serif, system-ui, sans-serif;background-color:#f8f9fa}
 .thumbnail{border:2px solid transparent;transition:border-color .15s}
 .thumbnail.active{border-color:#f97316!important;box-shadow:0 0 0 1px #f97316}
 .glass{background:rgba(255,255,255,.95);backdrop-filter:blur(10px)}
+.pulse-btn { 
+    animation: pulse-orange 2s infinite; 
+    display: block !important;
+}
+@keyframes pulse-orange {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); opacity: 1; }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); opacity: 1; }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); opacity: 1; }
+}
+@keyframes bounce-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+.animate-bounce-x { animation: bounce-x 1.5s infinite; }
 .hide-scroll::-webkit-scrollbar{display:none}
-.hide-scroll{-ms-overflow-style:none;scrollbar-width:none}
-@keyframes fade-in-down{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-.animate-fade-in-down{animation:fade-in-down .3s ease-out}
+.bg-gray-900{background-color:#111827}
+.border-white\/10{border-color:rgb(255 255 255 / 0.1)}
+.text-action{color:#ff9800}
+.min-w-\[70vw\]{min-width:70vw}
+.min-w-\[80vw\]{min-width:80vw}
+.min-w-\[85vw\]{min-width:85vw}
+.card{flex-shrink:0}
+.h-50{height:12.5rem}
+.h-56{height:14rem}
+.object-cover{object-fit:cover}
+.no-scrollbar{scrollbar-width:none;-ms-overflow-style:none}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.w-\[140px\]{width:140px}
+.w-\[200px\]{width:200px}
+.w-\[220px\]{width:220px}
+.w-\[240px\]{width:240px}
+.py-16{padding-top:4rem;padding-bottom:4rem}
+.py-20{padding-top:5rem;padding-bottom:5rem}
+.pt-5{padding-top:1.25rem}
+.pt-8{padding-top:2rem}
+.pt-10{padding-top:2.5rem}
+.pt-12{padding-top:3rem}
+.pt-14{padding-top:3.5rem}
+.pb-6{padding-bottom:1.5rem}
+.pb-8{padding-bottom:2rem}
+.pb-10{padding-bottom:2.5rem}
+.pb-14{padding-bottom:3.5rem}
+.pb-16{padding-bottom:4rem}
+.mb-10{margin-bottom:2.5rem}
+.mb-14{margin-bottom:3.5rem}
+
+
 
 /* === LAYOUT === */
 .pointer-events-none{pointer-events:none}
 .fixed{position:fixed}
+.bottom-0{bottom:0}
+.left-0{left:0}
+.right-0{right:0}
+.z-\[9999\]{z-index:9999}
+.animate-pulse-slow{animation:pulse 3s cubic-bezier(0.4,0,0.6,1) infinite}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.03); }
+}
 .absolute{position:absolute}
 .relative{position:relative}
 .inset-0{inset:0}
@@ -92,230 +144,1882 @@ body{font-family:ui-sans-serif, system-ui, sans-serif;background-color:#f8f9fa}
 .z-\[9999\]{z-index:9999}
 .col-span-2{grid-column:span 2/span 2}
 .mx-auto{margin-left:auto;margin-right:auto}
+.mb-0\.5{margin-bottom:.125rem}
 .mb-1{margin-bottom:.25rem}
+.mb-6 md:mb-10{margin-bottom:2.5rem}
+.mb-12{margin-bottom:3rem}
+.mb-16{margin-bottom:4rem}
 .mb-2{margin-bottom:.5rem}
+.mb-2\.5{margin-bottom:.625rem}
+.mb-20{margin-bottom:5rem}
 .mb-3{margin-bottom:.75rem}
 .mb-4{margin-bottom:1rem}
 .mb-5{margin-bottom:1.25rem}
-.mb-6{margin-bottom:1.5rem}
-.mb-8{margin-bottom:2rem}
-.mb-10{margin-bottom:2.5rem}
-.mb-12{margin-bottom:3rem}
-.mb-16{margin-bottom:4rem}
-.mb-20{margin-bottom:5rem}
+.mb-4 md:mb-6{margin-bottom:1.5rem}
+.mb-7{margin-bottom:1.75rem}
+.mb-5 md:mb-8{margin-bottom:2rem}
+.ml-0\.5{margin-left:.125rem}
 .ml-auto{margin-left:auto}
+.mr-1{margin-right:.25rem}
+.mr-2{margin-right:.5rem}
+.mt-0\.5{margin-top:.125rem}
 .mt-1{margin-top:.25rem}
+.mt-12{margin-top:3rem}
 .mt-2{margin-top:.5rem}
+.mt-3{margin-top:.75rem}
 .mt-4{margin-top:1rem}
 .mt-6{margin-top:1.5rem}
 .mt-8{margin-top:2rem}
-.mt-12{margin-top:3rem}
+.mt-auto{margin-top:auto}
+.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2}
+.line-clamp-3{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3}
 .block{display:block}
 .inline-block{display:inline-block}
 .flex{display:flex}
+.inline-flex{display:inline-flex}
+.mt-\[-16px\]{margin-top:-1rem}
+.bg-blue-600{background-color:#2563eb}
+.bg-purple-600{background-color:#9333ea}
+.bg-cyan-600{background-color:#0891b2}
+.bg-red-600{background-color:#dc2626}
+.bg-orange-500{background-color:#f97316}
+.bg-green-600{background-color:#16a34a}
+.bg-slate-800{background-color:#1e293b}
 .grid{display:grid}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .hidden{display:none}
+.aspect-\[9\/16\]{aspect-ratio:9/16}
+.h-1{height:.25rem}
+.h-2{height:.5rem}
+.h-4{height:1rem}
+.h-6{height:1.5rem}
+.h-7{height:1.75rem}
+.h-8{height:2rem}
 .h-10{height:2.5rem}
 .h-12{height:3rem}
+.h-14{height:3.5rem}
 .h-16{height:4rem}
 .h-20{height:5rem}
+.h-24{height:6rem}
+.h-28{height:7rem}
+.h-32{height:8rem}
+.h-48{height:12rem}
+.h-64{height:16rem}
+.h-\[300px\]{height:300px}
+.h-auto{height:auto}
 .h-full{height:100%}
+.w-2{width:.5rem}
+.w-6{width:1.5rem}
+.w-7{width:1.75rem}
+.w-8{width:2rem}
 .w-10{width:2.5rem}
 .w-12{width:3rem}
+.w-14{width:3.5rem}
 .w-16{width:4rem}
+.w-24{width:6rem}
+.w-32{width:8rem}
+.w-48{width:12rem}
+.w-64{width:16rem}
+.w-\[24\%\]{width:24%}
 .w-full{width:100%}
+.min-w-\[160px\]{min-width:160px}
 .max-w-7xl{max-width:80rem}
+.max-w-fit{max-width:fit-content}
+.max-w-lg{max-width:32rem}
+.max-w-xl{max-width:36rem}
+.flex-1{flex:1 1 0%}
+.flex-shrink-0,.shrink-0{flex-shrink:0}
+.flex-grow{flex-grow:1}
+.rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+@keyframes pulse{50%{opacity:.5}}
+.animate-\[pulse_1s_ease-in-out\]{animation:pulse 1s ease-in-out}
+.animate-\[pulse_2s_ease-in-out_infinite\]{animation:pulse 2s ease-in-out infinite}
+@keyframes ping{75%,100%{transform:scale(2);opacity:0}}
+.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}
+.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+.cursor-pointer{cursor:pointer}
+.cursor-zoom-in{cursor:zoom-in}
+.snap-x{scroll-snap-type:x var(--tw-scroll-snap-strictness)}
+.snap-mandatory{--tw-scroll-snap-strictness:mandatory}
+.snap-center{scroll-snap-align:center}
+.scroll-mt-32{scroll-margin-top:8rem}
+.scroll-smooth{scroll-behavior:smooth}
 .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .flex-col{flex-direction:column}
+.flex-nowrap{flex-wrap:nowrap}
+.items-start{align-items:flex-start}
+.items-end{align-items:flex-end}
 .items-center{align-items:center}
+.items-baseline{align-items:baseline}
+.justify-end{justify-content:flex-end}
+.justify-center{justify-content:center}
 .justify-between{justify-content:space-between}
+.gap-0\.5{gap:.125rem}
+.gap-1{gap:.25rem}
+.gap-1\.5{gap:.375rem}
 .gap-2{gap:.5rem}
 .gap-3{gap:.75rem}
 .gap-4{gap:1rem}
-.gap-6{gap:1.5rem}
+.gap-5{gap:1.25rem}
+.gap-8{gap:2rem}
 .gap-10{gap:2.5rem}
+.gap-x-12{column-gap:3rem}
+.gap-y-12{row-gap:3rem}
+.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}
+.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}
+.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}
+@media(min-width:768px){ .md\:space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))} }
+.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}
+.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}
+.overflow-hidden{overflow:hidden}
+.overflow-x-auto{overflow-x:auto}
+.whitespace-nowrap{white-space:nowrap}
+
+/* === BORDERS === */
+.rounded{border-radius:.25rem}
+.rounded-sm{border-radius:.125rem}
+.rounded-md{border-radius:.375rem}
+.rounded-lg{border-radius:.5rem}
 .rounded-xl{border-radius:.75rem}
 .rounded-2xl{border-radius:1rem}
 .rounded-3xl{border-radius:1.5rem}
+.rounded-full{border-radius:9999px}
 .border{border-width:1px}
-.bg-white{background-color:#fff}
-.bg-orange-500{background-color:#f97316}
-.text-slate-900{color:#0f172a}
-.text-orange-500{color:#f97316}
-.text-white{color:#fff}
-.hover\:opacity-80:hover{opacity:.8}
-.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
-.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0/.05);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.border-0{border-width:0}
+.border-2{border-width:2px}
+.border-b{border-bottom-width:1px}
+.border-b-2{border-bottom-width:2px}
+.border-b-4{border-bottom-width:4px}
+.border-l-4{border-left-width:4px}
+.border-t{border-top-width:1px}
+.border-dashed{border-style:dashed}
+.border-dotted{border-style:dotted}
+.border-\[\#1c8ec4\]{border-color:#1c8ec4}
+.border-black{border-color:#000}
+.border-gray-100{border-color:#f3f4f6}
+.border-gray-200{border-color:#e5e7eb}
+.border-gray-300{border-color:#d1d5db}
+.border-gray-600{border-color:#4b5563}
+.border-orange-300{border-color:#fdba74}
+.border-orange-500{border-color:#f97316}
+.border-red-200{border-color:#fecaca}
+.border-red-500{border-color:#ef4444}
+.border-red-500\/30{border-color:rgb(239 68 68/.3)}
+.border-red-600{border-color:#dc2626}
+.border-slate-100{border-color:#f1f5f9}
+.border-slate-200{border-color:#e2e8f0}
+.border-slate-300{border-color:#cbd5e1}
+.border-slate-700{border-color:#334155}
+.border-transparent{border-color:transparent}
+.border-white\/30{border-color:rgb(255 255 255/.3)}
+.border-white\/50{border-color:rgb(255 255 255/.5)}
 
-/* Anim */
-.pulse-btn{animation:pulse 2s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+/* === BACKGROUNDS === */
+.bg-\[\#000000\],.bg-black{background-color:#000}
+.bg-\[\#1a1a1a\]{background-color:#1a1a1a}
+.bg-\[\#2AABEE\]{background-color:#2AABEE}
+.bg-\[\#229ED9\]{background-color:#229ED9}
+.bg-\[\#FFD814\]{background-color:#FFD814}
+.bg-\[\#F7CA00\]{background-color:#F7CA00}
+.bg-\[\#f59e0b\]{background-color:#f59e0b}
+.bg-\[\#ffb703\]{background-color:#ffb703}
+.bg-\[\#fb8500\]{background-color:#fb8500}
+.bg-\[\#7360F2\]{background-color:#7360F2}
+.bg-black\/40{background-color:rgb(0 0 0/.4)}
+.bg-black\/50{background-color:rgb(0 0 0/.5)}
+.bg-black\/60{background-color:rgb(0 0 0/.6)}
+.bg-black\/70{background-color:rgb(0 0 0/.7)}
+.bg-blue-50{background-color:#eff6ff}
+.bg-gray-50{background-color:#f9fafb}
+.bg-gray-50\/50{background-color:rgb(249 250 251/.5)}
+.bg-gray-200{background-color:#e5e7eb}
+.bg-gray-800{background-color:#1f2937}
+.bg-green-50{background-color:#f0fdf4}
+.bg-green-500{background-color:#22c55e}
+.bg-green-600{background-color:#16a34a}
+.bg-orange-50{background-color:#fff7ed}
+.bg-orange-100{background-color:#ffedd5}
+.bg-orange-400{background-color:#fb923c}
+.bg-orange-500{background-color:#f97316}
+.bg-orange-600{background-color:#ea580c}
+.bg-orange-700{background-color:#c2410c}
+.bg-purple-50{background-color:#faf5ff}
+.bg-red-50{background-color:#fef2f2}
+.bg-red-500\/15{background-color:rgb(239 68 68/.15)}
+.bg-red-500\/20{background-color:rgb(239 68 68/.2)}
+.bg-red-600{background-color:#dc2626}
+.bg-red-600\/80{background-color:rgb(220 38 38/.8)}
+.bg-slate-50{background-color:#f8fafc}
+.bg-slate-100{background-color:#f1f5f9}
+.bg-slate-200{background-color:#e2e8f0}
+.bg-slate-800{background-color:#1e293b}
+.bg-slate-900{background-color:#0f172a}
+.bg-action{background-color:#ff6600}
+.bg-white{background-color:#fff}
+.bg-white\/5{background-color:rgb(255 255 255/.05)}
+.bg-white\/10{background-color:rgb(255 255 255/.1)}
+.bg-white\/20{background-color:rgb(255 255 255/.2)}
+.bg-white\/25{background-color:rgb(255 255 255/.25)}
+.bg-white\/30{background-color:rgb(255 255 255/.3)}
+.bg-yellow-50{background-color:#fefce8}
+.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
+.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}
+.from-black\/90{--tw-gradient-from:rgb(0 0 0/.9);--tw-gradient-to:rgb(0 0 0/0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
+.from-orange-500{--tw-gradient-from:#f97316;--tw-gradient-to:rgb(249 115 22/0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
+.via-black\/40{--tw-gradient-to:rgb(0 0 0/0);--tw-gradient-stops:var(--tw-gradient-from),rgb(0 0 0/.4),var(--tw-gradient-to)}
+.to-amber-500{--tw-gradient-to:#f59e0b}
+.to-transparent{--tw-gradient-to:transparent}
+
+/* === PADDING === */
+.p-0\.5{padding:.125rem}
+.p-1{padding:.25rem}
+.p-3{padding:.75rem}
+.p-4{padding:1rem}
+.p-5{padding:1.25rem}
+.p-6{padding:1.5rem}
+.pb-1{padding-bottom:.25rem}
+.pb-2{padding-bottom:.5rem}
+.pb-6{padding-bottom:1.5rem}
+.pl-0{padding-left:0}
+.pl-1{padding-left:.25rem}
+.pl-2{padding-left:.5rem}
+.pr-1{padding-right:.25rem}
+.pt-4{padding-top:1rem}
+.pt-6{padding-top:1.5rem}
+.pt-10{padding-top:2.5rem}
+.pt-16{padding-top:4rem}
+.pt-20{padding-top:5rem}
+.px-1{padding-left:.25rem;padding-right:.25rem}
+.px-1\.5{padding-left:.375rem;padding-right:.375rem}
+.px-2{padding-left:.5rem;padding-right:.5rem}
+.px-3{padding-left:.75rem;padding-right:.75rem}
+.px-4{padding-left:1rem;padding-right:1rem}
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.px-6{padding-left:1.5rem;padding-right:1.5rem}
+.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}
+.py-1{padding-top:.25rem;padding-bottom:.25rem}
+.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}
+.py-2{padding-top:.5rem;padding-bottom:.5rem}
+.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}
+.py-3{padding-top:.75rem;padding-bottom:.75rem}
+.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+
+/* === TYPOGRAPHY === */
+.text-left{text-align:left}
+.text-center{text-align:center}
+.text-right{text-align:right}
+.font-sans{font-family:ui-sans-serif,system-ui,sans-serif}
+.text-\[8px\]{font-size:8px}
+.text-\[9px\]{font-size:9px}
+.text-\[10px\]{font-size:10px}
+.text-\[11px\]{font-size:11px}
+.text-\[13px\]{font-size:13px}
+.text-xs{font-size:.75rem;line-height:1rem}
+.text-sm{font-size:.875rem;line-height:1.25rem}
+.text-base{font-size:1rem;line-height:1.5rem}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.text-xl{font-size:1.25rem;line-height:1.75rem}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-3xl{font-size:1.875rem;line-height:2.25rem}
+.text-4xl{font-size:2.25rem;line-height:2.5rem}
+.text-5xl{font-size:3rem;line-height:1}
+.font-medium{font-weight:500}
+.font-semibold{font-weight:600}
+.font-bold{font-weight:700}
+.font-extrabold{font-weight:800}
+.font-black{font-weight:900}
+.uppercase{text-transform:uppercase}
+.italic{font-style:italic}
+.leading-none{line-height:1}
+.leading-tight{line-height:1.25}
+.leading-snug{line-height:1.375}
+.leading-relaxed{line-height:1.625}
+.tracking-tight{letter-spacing:-.025em}
+.tracking-wide{letter-spacing:.025em}
+.tracking-wider{letter-spacing:.05em}
+.tracking-widest{letter-spacing:.1em}
+
+/* === TEXT COLORS === */
+.text-\[\#c2410b\]{color:#c2410b}
+.text-\[\#d97706\]{color:#d97706}
+.text-\[\#ffb703\]{color:#ffb703}
+.text-black{color:#000}
+.text-blue-500{color:#3b82f6}
+.text-blue-600{color:#2563eb}
+.text-gray-300{color:#d1d5db}
+.text-gray-400{color:#9ca3af}
+.text-gray-500{color:#6b7280}
+.text-gray-600{color:#4b5563}
+.text-green-500{color:#22c55e}
+.text-green-600{color:#16a34a}
+.text-orange-100{color:#ffedd5}
+.text-orange-400{color:#fb923c}
+.text-orange-500{color:#f97316}
+.text-orange-50{color:#fff7ed}
+.text-orange-600{color:#ea580c}
+.text-orange-700{color:#c2410c}
+.text-orange-800{color:#9a3412}
+.text-orange-950{color:#431407}
+.text-purple-500{color:#a855f7}
+.text-red-400{color:#f87171}
+.text-red-500{color:#ef4444}
+.text-red-600{color:#dc2626}
+.text-slate-300{color:#cbd5e1}
+.text-slate-400{color:#94a3b8}
+.text-slate-500{color:#64748b}
+.text-slate-600{color:#475569}
+.text-slate-700{color:#334155}
+.text-slate-800{color:#1e293b}
+.text-slate-900{color:#0f172a}
+.text-white{color:#fff}
+.text-yellow-500{color:#eab308}
+.underline{text-decoration-line:underline}
+.decoration-dashed{text-decoration-style:dashed}
+.underline-offset-4{text-underline-offset:4px}
+.line-through{text-decoration-line:line-through}
+.no-underline{text-decoration-line:none}
+.opacity-0{opacity:0}
+.opacity-60{opacity:.6}
+.opacity-75{opacity:.75}
+.opacity-80{opacity:.8}
+
+/* === SHADOWS === */
+.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0/.05);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0/.1),0 2px 4px -2px rgb(0 0 0/.1);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0/.1),0 4px 6px -4px rgb(0 0 0/.1);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0/.1),0 8px 10px -6px rgb(0 0 0/.1);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0/.25);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0/.05);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.drop-shadow-sm{filter:drop-shadow(0 1px 1px rgb(0 0 0/.05))}
+.drop-shadow-md{filter:drop-shadow(0 4px 3px rgb(0 0 0/.07)) drop-shadow(0 2px 2px rgb(0 0 0/.06))}
+.drop-shadow-lg{filter:drop-shadow(0 10px 8px rgb(0 0 0/.04)) drop-shadow(0 4px 3px rgb(0 0 0/.1))}
+
+/* === EFFECTS === */
+.outline-none{outline:2px solid transparent;outline-offset:2px}
+.backdrop-blur{backdrop-filter:blur(8px)}
+.backdrop-blur-md{backdrop-filter:blur(12px)}
+.object-contain{object-fit:contain}
+.object-cover{object-fit:cover}
+
+/* === TRANSITIONS === */
+.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.duration-300{transition-duration:300ms}
+.duration-500{transition-duration:500ms}
+
+/* === FOCUS === */
+.focus\:ring-1:focus{--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 1px var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}
+.focus\:ring-2:focus{--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 3px var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}
+.focus\:ring-white:focus{--tw-ring-color:#fff}
+.focus\:ring-orange-500:focus{--tw-ring-color:#f97316}
+.focus\:border-orange-500:focus{border-color:#f97316}
+
+/* === HOVER === */
+.hover\:bg-gray-50:hover{background-color:#f9fafb}
+.hover\:bg-gray-100:hover{background-color:#f3f4f6}
+.hover\:bg-slate-200:hover{background-color:#e2e8f0}
+.hover\:bg-slate-900:hover{background-color:#0f172a}
+.hover\:bg-orange-100:hover{background-color:#ffedd5}
+.hover\:bg-orange-200:hover{background-color:#fed7aa}
+.hover\:bg-orange-600:hover{background-color:#ea580c}
+.hover\:bg-orange-700:hover{background-color:#c2410c}
+.hover\:bg-black:hover{background-color:#000}
+.hover\:bg-black\/70:hover{background-color:rgb(0 0 0/.7)}
+.hover\:bg-\[\#229ED9\]:hover{background-color:#229ed9}
+.hover\:bg-\[\#2AABEE\]:hover{background-color:#2aabee}
+.hover\:bg-\[\#7360F2\]:hover{background-color:#7360f2}
+.hover\:bg-\[\#F7CA00\]:hover{background-color:#f7ca00}
+.hover\:bg-\[\#fb8500\]:hover{background-color:#fb8500}
+.hover\:text-orange-500:hover{color:#f97316}
+.hover\:text-gray-600:hover{color:#4b5563}
+.hover\:text-white:hover{color:#fff}
+.hover\:underline:hover{text-decoration-line:underline}
+.hover\:opacity-80:hover{opacity:.8}
+.hover\:opacity-60:hover{opacity:.6}
+.hover\:opacity-90:hover{opacity:.9}
+.hover\:scale-105:hover{transform:scale(1.05)}
+.hover\:scale-\[1\.02\]:hover{transform:scale(1.02)}
+.hover\:-translate-y-0\.5:hover{transform:translateY(-.125rem)}
+.hover\:-translate-y-1:hover{transform:translateY(-.25rem)}
+.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0/.1),0 2px 4px -2px rgb(0 0 0/.1);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0/.1),0 8px 10px -6px rgb(0 0 0/.1);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.hover\:border-orange-500:hover{border-color:#f97316}
+
+/* === ACTIVE === */
+.active\:border-b-0:active{border-bottom-width:0}
+.active\:mt-1:active{margin-top:.25rem}
+.active\:mb-1:active{margin-bottom:.25rem}
+.active\:bg-orange-700:active{background-color:#c2410c}
+
+/* === GROUP HOVER === */
+.group:hover .group-hover\:opacity-60{opacity:.6}
+.group:hover .group-hover\:opacity-100{opacity:1}
+.group-open\:rotate-180{transform:rotate(180deg)}
+details[open] > summary .group-open\:rotate-180{transform:rotate(180deg)}
+
+/* === LAST CHILD === */
+.last\:mb-0:last-child{margin-bottom:0}
+
+/* === SM RESPONSIVE (640px+) === */
+@media(min-width:640px){
+  .sm\:flex-row{flex-direction:row}
+  .sm\:items-baseline{align-items:baseline}
+  .sm\:justify-between{justify-content:space-between}
+  .sm\:gap-0{gap:0}
+  .sm\:inline-block{display:inline-block}
+  .sm\:inline-flex{display:inline-flex}
+  .sm\:w-1\/2{width:50%}
+  .sm\:w-\[45\%\]{width:45%}
+  .sm\:w-\[55\%\]{width:55%}
+  .sm\:pl-2{padding-left:.5rem}
+  .sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
+}
+
+/* === MD RESPONSIVE (768px+) === */
+@media(min-width:768px){
+  .md\:block{display:block}
+  .md\:hidden{display:none}
+  .md\:inline-flex{display:inline-flex}
+  .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .md\:col-span-1{grid-column:span 1/span 1}
+  .md\:col-span-4{grid-column:span 4/span 4}
+  .md\:col-span-8{grid-column:span 8/span 8}
+  .md\:gap-3{gap:.75rem}
+  .md\:gap-6{gap:1.5rem}
+  .md\:h-20{height:5rem}
+  .md\:min-w-\[220px\]{min-width:220px}
+  .md\:p-5{padding:1.25rem}
+  .md\:p-10{padding:2.5rem}
+  .md\:p-12{padding:3rem}
+  .md\:pt-14{padding-top:3.5rem}
+  .md\:mt-8{margin-top:2rem}
+  .md\:text-sm{font-size:.875rem;line-height:1.25rem}
+  .md\:text-base{font-size:1rem;line-height:1.5rem}
+  .md\:text-lg{font-size:1.125rem;line-height:1.75rem}
+  .md\:text-xl{font-size:1.25rem;line-height:1.75rem}
+  .md\:text-2xl{font-size:1.5rem;line-height:2rem}
+  .md\:text-3xl{font-size:1.875rem;line-height:2.25rem}
+  .md\:text-4xl{font-size:2.25rem;line-height:2.5rem}
+  .md\:text-xs{font-size:.75rem;line-height:1rem}
+  .md\:text-left{text-align:left}
+  .md\:line-clamp-2{-webkit-line-clamp:2;line-clamp:2}
+  .md\:line-clamp-none{-webkit-line-clamp:unset;line-clamp:none}
+  .md\:flex-row{flex-direction:row}
+}
+
+/* === LG RESPONSIVE (1024px+) === */
+@media(min-width:1024px){
+  .lg\:flex{display:flex}
+  .lg\:hidden{display:none}
+  .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .lg\:col-span-3{grid-column:span 3/span 3}
+  .lg\:col-span-9{grid-column:span 9/span 9}
+  .lg\:gap-14{gap:3.5rem}
+  .lg\:p-10{padding:2.5rem}
+  .lg\:mb-0{margin-bottom:0}
+  .lg\:mt-auto{margin-top:auto}
+  .lg\:min-w-\[260px\]{min-width:260px}
+  .lg\:px-8{padding-left:2rem;padding-right:2rem}
+  .lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}
+}
+
+/* === XL RESPONSIVE (1280px+) === */
+@media(min-width:1280px){
+  .xl\:gap-8{gap:2rem}
+}
+
+/* === DETAILS/SUMMARY marker hide === */
+.\[\&_summary\:\:-webkit-details-marker\]\:hidden summary::-webkit-details-marker{display:none}
+details summary::-webkit-details-marker{display:none}
 </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+
 </head>
 
 <body class="text-slate-900 pt-20">
 
     <!-- Header -->
-    <header class="fixed w-full top-0 left-0 z-50 glass border-b border-slate-200 shadow-sm transition-all duration-300">
+    <header
+        class="fixed w-full top-0 left-0 z-50 glass border-b border-slate-200 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
                     <i class="fa-solid fa-leaf text-orange-500 text-3xl"></i>
-                    <span class="font-black text-2xl tracking-tight text-slate-800 uppercase">GARDEN<span class="text-orange-500">PRO</span></span>
+                    <span class="font-black text-2xl tracking-tight text-slate-800 uppercase">GARDEN<span
+                            class="text-orange-500">PRO</span></span>
                 </a>
-                <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
-                    <a href="#description" class="hover:text-orange-500 transition-colors">Про товар</a>
-                    <a href="#video-review" class="hover:text-orange-500 transition-colors">Відеоогляд</a>
-                    <a href="#specs" class="hover:text-orange-500 transition-colors">Характеристики</a>
-                    <a href="#reviews" class="hover:text-orange-500 transition-colors">Відгуки</a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex flex-nowrap items-center gap-5 xl:gap-8 font-medium text-slate-600">
+                    <a href="#description" class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Про
+                        товар</a>
+                    <a href="#video-review"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Відеоогляд</a>
+                    <a href="#specs"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Характеристики</a>
+                    <a href="#manufacturer"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Комплектація</a>
+                    <a href="#reviews"
+                        class="hover:text-orange-500 transition-colors whitespace-nowrap text-sm">Відгуки</a>
                 </nav>
-                <div class="flex items-center gap-4">
-                    <a href="#buy-box" class="hidden md:inline-flex bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-lg transition-colors shadow-md">
-                        Замовити зараз
+
+                <!-- Contacts & CTA -->
+                <div class="flex items-center gap-4 md:gap-6">
+                    <div class="flex flex-col items-end justify-center">
+                        <div class="flex items-center gap-2 mb-1">
+                            <a href="https://t.me/buyhunter1_bot?start=sekator" target="_blank" rel="noopener"
+                                class="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#2AABEE] text-slate-600 hover:text-white flex items-center justify-center transition-colors"
+                                aria-label="Написати в Telegram"><i class="fa-brands fa-telegram text-sm" aria-hidden="true"></i></a>
+                            <a href="viber://chat?number=%2B380800123456"
+                                class="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#7360F2] text-slate-600 hover:text-white flex items-center justify-center transition-colors"
+                                aria-label="Написати у Viber"><i class="fa-brands fa-viber text-sm" aria-hidden="true"></i></a>
+                        </div>
+                        <span class="text-xs text-green-600 font-semibold flex items-center gap-1.5">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                            </span>
+                            Ми онлайн
+                        </span>
+                    </div>
+                    <a href="#buy-box"
+                        class="hidden md:inline-flex bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-lg transition-colors shadow-md text-sm">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Замовити зараз
                     </a>
-                    <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()"
+                        class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
                         <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl z-40 lg:hidden animate-fade-in-down">
+            <nav class="flex flex-col p-4 gap-1">
+                <a href="#description" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-circle-info w-6 text-orange-500"></i> Про товар
+                </a>
+                <a href="#video-review" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-play w-6 text-orange-500"></i> Відеоогляд
+                </a>
+                <a href="#upsell" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-tags w-6 text-orange-500"></i> Знижки
+                </a>
+                <a href="#specs" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-list w-6 text-orange-500"></i> Характеристики
+                </a>
+                <a href="#manufacturer" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-box-open w-6 text-orange-500"></i> Комплектація
+                </a>
+                <a href="#reviews" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-star w-6 text-orange-500"></i> Відгуки
+                </a>
+                <a href="#faq" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold transition-colors border-l-4 border-transparent hover:border-orange-500">
+                    <i class="fa-solid fa-circle-question w-6 text-orange-500"></i> Часті питання
+                </a>
+                <a href="#buy-box" onclick="toggleMobileMenu()"
+                    class="flex items-center gap-3 p-4 rounded-xl bg-orange-500 text-white font-bold hover:bg-orange-600 mt-1 transition-colors">
+                    <i class="fa-solid fa-cart-shopping w-6"></i> Замовити зараз
+                </a>
+                <div class="mt-4 pt-4 border-t border-slate-100">
+                    <a href="tel:0800123456"
+                        class="flex items-center gap-3 p-4 rounded-xl bg-slate-50 text-orange-600 font-bold border border-slate-200">
+                        <i class="fa-solid fa-phone w-6"></i> 0 800 123 456
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <div class="pt-14 mt-8" id="about"></div>
+    <div class="pt-1 md:pt-10 mt-1 md:mt-4" id="about"></div>
 
-    <!-- Основной блок товара -->
+    <!-- Основной блок товара (Above the fold) -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div class="bg-white p-6 lg:p-10 rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 shadow-sm border border-slate-100">
+        <div
+            class="bg-white p-6 lg:p-10 rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 shadow-sm border border-slate-100">
+
             <!-- Левая колонка -->
             <div class="flex flex-col gap-4">
-                <div class="relative w-full rounded-2xl overflow-hidden shadow-sm">
-                    <img id="main-image" src="./img/trimer-pta25-banner.webp" alt="Тример Procraft PTA25" class="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105">
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-sm group">
+                    <picture>
+                        <img id="main-image" src="./img/trimer-pta25-banner.webp" srcset="./img/trimer-pta25-banner-mobile.webp 800w, ./img/trimer-pta25-banner.webp 1600w" sizes="(max-width: 600px) 400px, 800px"
+                            alt="Акумуляторна коса Прокрафт PTA25"
+                            width="800" height="600" fetchpriority="high" decoding="async"
+                            class="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105 cursor-zoom-in">
+                    </picture>
                 </div>
-                <div class="flex gap-2 overflow-x-auto pb-1 justify-between hide-scroll font-bold">
-                    <div class="thumbnail active w-[24%] rounded-xl cursor-pointer shadow-sm overflow-hidden border-2 border-transparent" onclick="changeImage(this, './img/trimer-pta25-banner.webp')">
-                        <img src="./img/trimer-pta25-banner-thumb.jpg" class="w-full h-16 md:h-20 object-cover">
+
+                <!-- Thumbnails -->
+                <div class="flex gap-2 md:gap-3 overflow-x-auto pb-1 justify-between hide-scroll">
+                    <div class="thumbnail active w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/trimer-pta25-banner.jpg')">
+                        <img src="./img/trimer-pta25-banner-thumb.jpg" alt="Характеристики" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
+                            Огляд</div>
                     </div>
-                    <div class="thumbnail w-[24%] rounded-xl cursor-pointer shadow-sm overflow-hidden border-2 border-transparent" onclick="changeImage(this, './img/trimer-pta25-lifestyle-new.webp')">
-                        <img src="./img/trimer-pta25-lifestyle-new-thumb.jpg" class="w-full h-16 md:h-20 object-cover">
+                    <div class="thumbnail w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/trimer-pta25-lifestyle-new.jpg')">
+                        <img src="./img/trimer-pta25-lifestyle-new-thumb.jpg" alt="У роботі" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
+                            У роботі</div>
+                    </div>
+                    <div class="thumbnail w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/trimer-pta25-hero-new.jpg')">
+                        <img src="./img/trimer-pta25-hero-new-thumb.jpg" alt="Тример Procraft" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
+                            Керма</div>
+                    </div>
+                    <div class="thumbnail w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
+                        onclick="changeImage(this, './img/trimer-pta25-kit-new.jpg')">
+                        <img src="./img/trimer-pta25-kit-new-thumb.jpg" alt="Комплектація" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
+                        <div
+                            class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
+                            Комплект</div>
                     </div>
                 </div>
             </div>
+
             <!-- Правая колонка -->
             <div class="flex flex-col">
-                <h1 class="text-2xl lg:text-4xl font-extrabold text-orange-600 mb-4 uppercase">Акумуляторна коса Procraft PTA25 (2 акб)</h1>
-                <p class="text-lg text-slate-700 font-medium mb-6 leading-relaxed">Потужна коса з 40V живленням та безщітковим двигуном. Ідеально підходить для скошування трави та молодих кущів на ділянках будь-якої складності.</p>
-                
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-between mb-8">
-                    <div class="text-slate-400 font-bold">
-                        <div class="text-sm line-through">3069 грн</div>
-                        <div class="text-xs uppercase">Стара ціна</div>
+                <div class="flex flex-col gap-4 md:gap-8">
+                    <!-- Rating -->
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center text-orange-400 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text-sm font-bold text-gray-500 underline decoration-dashed underline-offset-4">4.8 (1,245 відгуків)</div>
                     </div>
-                    <div class="text-red-600 font-black text-right">
-                        <div class="text-4xl">1995 грн</div>
-                        <div class="text-xs uppercase text-orange-500">Ціна з урахуванням знижки -35%</div>
+
+                    <!-- Headlines -->
+                    <div>
+                        <h1 class="text-2xl lg:text-3xl font-black mb-3 leading-tight text-green-600">
+                            Акумуляторна Коса Procraft PTA25: <span class="text-orange-500 underline underline-offset-4 decoration-2">Потужність 40V</span> у Ваших руках!
+                        </h1>
+                        <p class="text-gray-600 text-sm md:text-base font-medium leading-snug">
+                            Забудьте про бензин та дроти. 2 акумулятори в комплекті для тривалої роботи на ділянці.
+                        </p>
+                    </div>
+
+                    <!-- Price Card -->
+                    <div class="bg-gray-50 py-4 px-6 rounded-2xl flex items-center justify-between border border-gray-100 shadow-inner">
+                        <div class="space-y-2">
+                            <div class="text-[10px] uppercase font-black text-gray-400">Стара ціна</div>
+                            <div class="text-2xl line-through text-gray-400 font-bold">3069 грн</div>
+                        </div>
+                        <div class="text-right space-y-2">
+                            <div class="text-[10px] uppercase font-black text-orange-500">Ціна за акцією</div>
+                            <div class="text-4xl font-black text-red-600 tracking-tighter">1995 <span class="text-xl">грн</span></div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="#buy-box" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 rounded-2xl text-center uppercase tracking-widest shadow-xl pulse-btn text-lg transition-transform active:scale-95">
+                        ЗАМОВИТИ ЗІ ЗНИЖКОЮ
+                    </a>
+
+                    <!-- Urgency Icons -->
+                    <div class="flex justify-between items-center text-[9px] md:text-[10px] font-black uppercase text-gray-500 tracking-wider px-1 mt-4">
+                        <div class="flex items-center gap-1">
+                             🔥 Залишилося 7 шт.
+                        </div>
+                        <div class="flex items-center gap-1">
+                             🚚 Доставка 1-2 дні
+                        </div>
                     </div>
                 </div>
-                
-                <a href="#buy-box" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-5 rounded-2xl text-center uppercase tracking-widest shadow-xl pulse-btn text-lg transition-transform active:scale-95">
-                    ЗАМОВИТИ ЗІ ЗНИЖКОЮ
-                </a>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- Секции из recovered sekator -->
-    <section id="video-review" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 scroll-mt-32 pt-16">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center uppercase">Відеоогляд в роботі</h2>
-        <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl relative group">
-            <video class="w-full h-full object-cover" controls playsinline poster="./img/trimer-pta25-banner.webp">
-                <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%812.mov" type="video/quicktime">
-            </video>
+
+    <!-- Блок 'Один інструмент для всього саду' (Action Visuals) -->
+    <section class="pt-12 pb-6 bg-gray-900 text-white mt-8">
+        <div class="px-5 mb-14">
+            <h2 class="text-2xl font-black uppercase italic leading-none mb-4">Один інструмент для <br> <span class="text-action">всього саду.</span></h2>
+            <p class="text-sm text-gray-400">Потужності вистачить на будь-які завдання, від м'якого газону до диких зарослів.</p>
+        </div>
+
+        <div class="flex overflow-x-auto gap-4 px-5 no-scrollbar pb-10 hide-scroll">
+            <div class="w-[240px] flex-shrink-0 card bg-white/5 p-2 rounded-2xl border border-white/10">
+                <img src="./img/trimer-pta25-comparison.jpg" alt="Task 1" loading="lazy" class="w-full h-50 object-cover rounded-xl mb-4">
+                <div class="p-4">
+                    <h5 class="font-black text-sm uppercase text-action mb-2">Робота ліскою</h5>
+                    <p class="text-xs text-gray-400">Ідеально ріже високу траву та соковиту зелень на великих площах.</p>
+                </div>
+            </div>
+            <div class="w-[240px] flex-shrink-0 card bg-white/5 p-2 rounded-2xl border border-white/10">
+                <img src="./img/trimer-pta25-lifestyle.jpg" alt="Task 2" loading="lazy" class="w-full h-50 object-cover rounded-xl mb-4">
+                <div class="p-4">
+                    <h5 class="font-black text-sm uppercase text-action mb-2">Сталевий диск</h5>
+                    <p class="text-xs text-gray-400">Легко зрізає товсті чагарники, колючки та навіть молоду поросль дерев.</p>
+                </div>
+            </div>
+            <div class="w-[240px] flex-shrink-0 card bg-white/5 p-2 rounded-2xl border border-white/10">
+                <div class="w-full h-50 bg-slate-800 rounded-xl mb-4 flex items-center justify-center">
+                    <i class="fa-solid fa-play-circle text-5xl text-action"></i>
+                </div>
+                <div class="p-4">
+                    <h5 class="font-black text-sm uppercase text-action mb-2">Чистота країв</h5>
+                    <p class="text-xs text-gray-400">Акуратно рівняє краї газону біля парканів, доріжок та дерев.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Hint Pill -->
+        <div class="flex justify-center mt-[-16px]">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10">
+                <i class="fa-solid fa-chevron-left text-[10px] text-white/30"></i>
+                <span class="text-[10px] uppercase font-black text-white tracking-[0.2em] flex items-center gap-2">
+                    Гортайте <i class="fa-solid fa-arrow-right-long animate-bounce-x text-action"></i>
+                </span>
+                <i class="fa-solid fa-chevron-right text-[10px] text-white/30"></i>
+            </div>
         </div>
     </section>
 
-    <!-- Характеристики -->
-    <section id="specs" class="bg-white py-16 mb-16 border-y border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center uppercase">Технічні характеристики</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-                <div class="space-y-4">
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Напруга</span><span class="font-black">40В (2х20В)</span></div>
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Двигун</span><span class="font-black">Безщітковий</span></div>
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Оберти</span><span class="font-black">9000 об/хв</span></div>
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Ширина скошування</span><span class="font-black">300 мм</span></div>
+    <!-- Блок 'Анатомія Потужності' (Visual Anatomy) -->
+    <section class="pt-8 pb-16 px-5 bg-white overflow-hidden">
+        <div class="text-center mb-10">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.3em] mb-2">Технічна досконалість</h2>
+            <h3 class="text-3xl font-black uppercase text-green-700 leading-none italic text-center">Анатомія Потужності</h3>
+        </div>
+
+        <div class="relative max-w-lg mx-auto">
+            <img src="./img/trimer-pta25-anatomy-new.jpg" alt="Anatomy" loading="lazy" class="w-full h-auto py-10 transform scale-110">
+            
+            <div class="space-y-6 mt-12 relative z-10">
+                <div class="flex items-center gap-4 group">
+                    <div class="w-14 h-14 rounded-full bg-green-800 text-orange-500 flex items-center justify-center shrink-0 shadow-lg font-black italic text-lg border-4 border-green-50">40V</div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Безщітковий двигун</h4>
+                        <p class="text-sm text-gray-500 font-medium">Працює у 5 разів довше, не перегрівається та видає божевільну потужність.</p>
+                    </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Вага</span><span class="font-black">3.9 кг</span></div>
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Тип штанги</span><span class="font-black">Пряма, розбірна</span></div>
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Час роботи</span><span class="font-black">до 60 хв</span></div>
-                    <div class="flex justify-between border-b pb-2"><span class="text-gray-500 font-bold">Гарантія</span><span class="font-black">12 місяців</span></div>
+                <div class="flex items-center gap-4 group">
+                    <div class="w-14 h-14 rounded-full bg-green-800 text-orange-500 flex items-center justify-center shrink-0 shadow-lg font-black italic text-lg border-4 border-green-50">X2</div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Робота від 2-х АКБ</h4>
+                        <p class="text-sm text-gray-500 font-medium">40 вольт реальної сили. Косить навіть густий бур'ян та дрібні чагарники.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 group">
+                    <div class="w-14 h-14 rounded-full bg-green-800 text-orange-500 flex items-center justify-center shrink-0 shadow-lg font-black border-4 border-green-50"><i class="fa-solid fa-car text-xl"></i></div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Розбірна штанга</h4>
+                        <p class="text-sm text-gray-500 font-medium">Посилена конструкція, що миттєво складається та вміщується в будь-яке авто.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 group">
+                    <div class="w-14 h-14 rounded-full bg-green-800 text-orange-500 flex items-center justify-center shrink-0 shadow-lg font-black border-4 border-green-50"><i class="fa-solid fa-hands text-xl"></i></div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Антивібраційна система</h4>
+                        <p class="text-sm text-gray-500 font-medium">Спеціальна підвіска та ручки бережуть ваші суглоби від перевтоми.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Buy Box (Recovered Form Logic) -->
-    <section id="buy-box" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 scroll-mt-24">
-        <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase leading-tight">Встигни забрати <br><span class="text-orange-500">за супер-ціною!</span></h2>
-                <ul class="space-y-4 font-bold text-slate-700 text-lg">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Оплата при отриманні</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Перевірка перед оплатою</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Швидка доставка 1-2 дні</li>
-                </ul>
+    <!-- Блок Відеоогляд (Одиночне відео) -->
+    <!-- Блок Відеоогляд (Мульти-відео) -->
+    <section id="video-review" class="max-w-4xl mx-auto px-4 sm:px-6 mb-12 scroll-mt-32 pt-5">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-black uppercase italic leading-none mb-4 text-slate-900">Тример у дії</h2>
+            <p class="text-sm text-slate-500 max-w-lg mx-auto">Дивіться реальні кадри роботи з різними типами зарослів</p>
+        </div>
+
+        <div class="space-y-10">
+            <!-- Video 1 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xs italic">1</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Робота на відкритому газоні</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%812.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%812.mov#t=0.001" type="video/mp4">
+                </video>
             </div>
-            <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-200">
-                <form onsubmit="handleOrder(event, 'Тример Procraft PTA25 (40V)')" class="flex flex-col gap-6">
-                    <input type="hidden" name="product_id" value="368">
-                    <input type="hidden" name="price" value="1995">
-                    <div>
-                        <label class="block text-xs font-black text-slate-400 uppercase mb-2 ml-1">Твоє ім'я</label>
-                        <input type="text" name="name" placeholder="Олександр" required class="w-full p-4 rounded-xl border border-slate-200 bg-white focus:border-orange-500 outline-none font-bold text-lg">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black text-slate-400 uppercase mb-2 ml-1">Номер телефону</label>
-                        <input type="tel" name="phone" placeholder="0XXXXXXXXX" required pattern="^(\+?380|0)[0-9]{9}$" class="w-full p-4 rounded-xl border border-slate-200 bg-white focus:border-orange-500 outline-none font-bold text-lg">
-                    </div>
-                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-6 rounded-2xl text-xl uppercase tracking-widest shadow-lg pulse-btn">
-                        ПІДТВЕРДИТИ ЗАМОВЛЕННЯ
-                    </button>
-                </form>
+
+            <!-- Video 2 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-xs italic">2</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Густий бур'ян та висока трава</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%811.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%811.mov#t=0.001" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs italic">3</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Складні зони та перешкоди</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%813-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%813-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE.mov#t=0.001" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs italic">4</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Ергономіка та зручність керування</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%814-%D0%A0%D1%83%D1%87%D0%BA%D0%B0.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%814-%D0%A0%D1%83%D1%87%D0%BA%D0%B0.mov#t=0.001" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-xs italic">5</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Потужність ріжучої системи</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%815-%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%815-%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0.mov#t=0.001" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs italic">6</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Ефективність на складних ділянках</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%816.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%816.mov#t=0.001" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Video 7 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
+                <div class="p-4 border-b border-slate-50 flex items-center gap-3">
+                    <span class="w-7 h-7 rounded-full bg-cyan-600 text-white flex items-center justify-center font-bold text-xs italic">7</span>
+                    <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Повний огляд можливостей</h3>
+                </div>
+                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%817.mov#t=0.001" type="video/quicktime">
+                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%817.mov#t=0.001" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <div class="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                    <i class="fa-solid fa-camera-retro text-orange-500"></i>
+                    <span class="font-bold">Знято нашими клієнтами</span>
+                </div>
+                <a href="#buy-box" class="bg-action hover:bg-green-700 text-white font-black text-sm px-10 py-4 rounded-full transition-all uppercase tracking-widest shadow-xl hover:shadow-green-200">
+                    Придбати тример
+                </a>
             </div>
         </div>
     </section>
+
+
+
+    <!-- SECTION 1: ABOUT PRODUCT (Minimalist React Style) -->
+    <section id="description" class="max-w-4xl mx-auto px-4 sm:px-6 mb-16 mt-16 scroll-mt-32">
+        <div class="flex items-center gap-3 mb-10">
+            <div class="w-1 h-8 bg-orange-500 rounded-full"></div>
+            <h2 class="text-3xl font-black text-zinc-900 tracking-tight">Про цей товар</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Item 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-orange-500">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-zinc-900 mb-1 leading-tight">Потужна ріжуча система</h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed">Число оборотів холостого ходу становить 9000 об/хв, що дозволяє легко справлятися навіть із густими бур'янами.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-500">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-zinc-900 mb-1 leading-tight">Офіційна підтримка</h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed">36 місяців офіційної гарантії від виробника Procraft підтверджують високу якість.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-zinc-900 mb-1 leading-tight">Унікальна комплектація</h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed">В комплект входять 5 пластикових ножів, 2 металевих 2Т, 1 диск 40Т та цілих 6 котушок.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="bg-white p-6 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-500">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14V8"/><path d="M9 11h6"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-zinc-900 mb-1 leading-tight">Ергономіка та зручність</h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed">Телескопічна штанга та додаткові колеса (Ø 120 мм) роблять експлуатацію комфортною.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- С этим товаром часто покупают (Апселл) -->
+    <!-- Детальні технічні характеристики (Стиль Розетки) -->
+    <!-- SECTION 2: ТЕХНІЧНИЙ ПАСПОРТ -->
+    <section id="specs" class="max-w-xl mx-auto px-4 sm:px-6 mb-12 scroll-mt-32">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <!-- Dark Header -->
+            <div class="px-6 py-6 relative overflow-hidden" style="background-color: #1a1f2e;">
+                <h2 class="text-xl font-black text-white uppercase leading-tight mb-1" style="letter-spacing: 0.02em;">Технічний паспорт</h2>
+                <p class="text-gray-400 text-xs">Повні специфікації моделі PTA25</p>
+            </div>
+
+            <!-- Specs Content -->
+            <div class="px-6 py-6">
+                <!-- Group 1 -->
+                <h3 class="text-xs font-black uppercase text-orange-500 mb-5 flex items-center gap-2" style="letter-spacing: 0.15em;">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 inline-block"></span>
+                    Основні характеристики
+                </h3>
+                <table class="w-full mb-8" style="border-collapse: separate; border-spacing: 0 12px;">
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4" style="width: 20px; vertical-align: top;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg></td>
+                        <td class="text-gray-500 text-sm">Бренд</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">Procraft PTA25 (2 акб)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4" style="vertical-align: top;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 0 8.49l-3.77 3.77"/></svg></td>
+                        <td class="text-gray-500 text-sm">Тип інструмента</td>
+                        <td class="text-gray-900 font-bold text-sm text-right leading-snug">Акумуляторна коса<br>(Тример) з колесами</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/></svg></td>
+                        <td class="text-gray-500 text-sm">Ширина скошування</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">150 мм</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg></td>
+                        <td class="text-gray-500 text-sm">Тип штанги</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">Телескопічна (67 - 110 см)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8l1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg></td>
+                        <td class="text-gray-500 text-sm">Розташування двигуна</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">Нижнє</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></td>
+                        <td class="text-gray-500 text-sm">Країна бренду</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">Німеччина (Збірка Китай)</td>
+                    </tr>
+                </table>
+
+                <!-- Group 2 -->
+                <h3 class="text-xs font-black uppercase text-blue-600 mb-5 flex items-center gap-2" style="letter-spacing: 0.15em;">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600 inline-block"></span>
+                    Живлення та двигун
+                </h3>
+                <table class="w-full" style="border-collapse: separate; border-spacing: 0 12px;">
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4" style="width: 20px;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></td>
+                        <td class="text-gray-500 text-sm">Тип двигуна</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">Безщітковий, 40V (2x20V)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></td>
+                        <td class="text-gray-500 text-sm">Напруга акумулятора</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">40 В (2 x 20 В)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2"/></svg></td>
+                        <td class="text-gray-500 text-sm">Ємність акумулятора</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">1.5 А·год (Li-Ion)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg></td>
+                        <td class="text-gray-500 text-sm">Кількість АКБ у комплекті</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">2 шт</td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-400 text-sm pr-4"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></td>
+                        <td class="text-gray-500 text-sm">Час повної зарядки</td>
+                        <td class="text-gray-900 font-bold text-sm text-right">1.5 - 2 години</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-gray-50 px-4 py-3 flex flex-wrap items-center justify-center gap-4 border-t border-gray-100">
+                <div class="flex items-center gap-1 text-green-600 font-bold whitespace-nowrap" style="font-size: 9px; letter-spacing: 0.08em;">
+                    <svg style="width:10px;height:10px;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    ПЕРЕВІРЕНО PROCRAFT
+                </div>
+                <div class="flex items-center gap-1 text-blue-600 font-bold whitespace-nowrap" style="font-size: 9px; letter-spacing: 0.08em;">
+                    <svg style="width:10px;height:10px;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                    ЄВРОПЕЙСЬКА СЕРТИФІКАЦІЯ
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BLOCK -->
+    <div class="max-w-xl mx-auto px-4 sm:px-6 mb-16 scroll-mt-32">
+        <!-- Price Card -->
+        <div class="bg-gray-50 py-4 px-6 rounded-2xl flex items-center justify-between border border-gray-100 shadow-inner mb-4">
+            <div class="space-y-2">
+                <div class="text-[10px] uppercase font-black text-gray-400">Стара ціна</div>
+                <div class="text-2xl line-through text-gray-400 font-bold">3069 грн</div>
+            </div>
+            <div class="text-right space-y-2">
+                <div class="text-[10px] uppercase font-black text-orange-500">Ціна за акцією</div>
+                <div class="text-4xl font-black text-red-600 tracking-tighter">1995 <span class="text-xl">грн</span></div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="#buy-box" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 rounded-2xl text-center uppercase tracking-widest shadow-xl pulse-btn text-lg transition-transform active:scale-95">
+            ЗАМОВИТИ ЗІ ЗНИЖКОЮ
+        </a>
+
+        <!-- Urgency Icons -->
+        <div class="flex justify-between items-center text-[9px] md:text-[10px] font-black uppercase text-gray-500 tracking-wider px-1 mt-4">
+            <div class="flex items-center gap-1">
+                 🔥 Залишилося 7 шт.
+            </div>
+            <div class="flex items-center gap-1">
+                 🚚 Доставка 1-2 дні
+            </div>
+        </div>
+    </div>
+
+    <!-- Перенесена форма замовлення -->
+    <section id="buy-box" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 scroll-mt-24">
+        <div class="bg-white p-6 md:p-12 rounded-[2rem] shadow-2xl border border-gray-100 relative overflow-hidden">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1.5 bg-orange-500 text-white font-black text-[10px] uppercase rounded-full mb-6" style="letter-spacing: 0.1em;">
+                        Акція діє сьогодні
+                    </div>
+                    
+                    <h2 class="text-lg md:text-2xl font-black text-gray-900 mb-4 leading-tight tracking-tight">Оформлюйте замовлення <br><span class="text-orange-500 block mt-1">зі знижкою 35%</span></h2>
+ 
+                    
+                    <div class="space-y-2 md:space-y-3">
+                        <div class="flex items-center gap-3 text-[13px] md:text-sm font-bold text-gray-700">
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0 text-orange-500">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"/><path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                            </div>
+                            Доставка Новою або Укрпоштою
+                        </div>
+                        <div class="flex items-center gap-3 text-[13px] md:text-sm font-bold text-gray-700">
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0 text-orange-500">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+                            </div>
+                            Оплата при отриманні (післяплата)
+                        </div>
+                        <div class="flex items-center gap-3 text-[13px] md:text-sm font-bold text-gray-700">
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0 text-orange-500">
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            24 місяці офіційної гарантії
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 md:p-10 rounded-3xl border border-gray-100 shadow-inner mt-0 lg:mt-0">
+                    <form id="order-form-footer" onsubmit="handleOrder(event, 'Акумуляторна коса Procraft PTA25 (40V)')" class="space-y-5 flex flex-col items-center">
+                        <input type="hidden" name="product_id" value="368">
+                        <input type="hidden" name="price" value="1995">
+                        
+                        <div class="w-full">
+                            <label class="block text-[10px] font-black uppercase text-gray-400 mb-2 ml-1" style="letter-spacing: 0.1em;">Ваше Прізвище та Ім'я</label>
+                            <input type="text" name="name" placeholder="Олександр Петренко" required
+                                class="w-full p-4 rounded-xl border-2 border-white bg-white focus:border-orange-500 transition-colors outline-none font-bold text-lg text-gray-900 shadow-sm placeholder:text-gray-300">
+                        </div>
+                        <div class="w-full">
+                            <label class="block text-[10px] font-black uppercase text-gray-400 mb-2 ml-1" style="letter-spacing: 0.1em;">Контактний Телефон</label>
+                            <input type="tel" name="phone" placeholder="0XXXXXXXXX" required pattern="^(\+?380|0)[0-9]{9}$"
+                                class="w-full p-4 rounded-xl border-2 border-white bg-white focus:border-orange-500 transition-colors outline-none font-bold text-lg text-gray-900 shadow-sm placeholder:text-gray-300">
+                        </div>
+
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-5 md:py-6 rounded-xl text-lg md:text-xl uppercase tracking-widest shadow-lg pulse-btn transition-transform active:scale-95 mt-4">
+                            ПІДТВЕРДИТИ ЗАМОВЛЕННЯ
+                        </button>
+                    </form>
+
+                    <div id="success-msg-footer" class="hidden text-center py-10 flex flex-col items-center">
+                        <div class="text-6xl text-green-500 mb-4 font-black">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-2 tracking-tight">Дякуємо!</h3>
+                        <p class="text-gray-500 font-medium">Ми зателефонуємо вам найближчим часом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ (Частые вопросы) -->
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-16 scroll-mt-32">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-5 md:mb-8 text-center">Часті запитання</h2>
+
+        <div class="space-y-2.5 md:space-y-4">
+            <details
+                class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Чи впораюсь я, якщо ніколи не користувалася тримером?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div
+                    class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Так, тример Procraft інтуїтивно зрозумілий. Він легший за бензинові аналоги (важить
+                    всього 3.9 кг у зборі), не потребує зусиль під час роботи та має регульовану штангу.
+                    Ідеально підходить як для чоловіків, так і для жінок будь-якого віку.
+                </div>
+            </details>
+
+            <details
+                class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Чи точно бере сухі та тверді гілки?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div
+                    class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    В інструменті встановлений потужний двигун на 9000 об/хв та якісні ножі (пластикові, металеві та диск 40Т). Він ріже густу траву, бур'яни та дрібні кущі легко та швидко.
+                </div>
+            </details>
+
+            <details
+                class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Що робити, якщо щось зламається?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div
+                    class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Ми надаємо <b>офіційну гарантію 12 місяців</b> від виробника. Якщо з інструментом щось трапиться не
+                    з вашої вини, ми безкоштовно зробимо ремонт або замінимо інструмент на новий протягом кількох днів.
+                </div>
+            </details>
+
+            <details
+                class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Як і коли доставлять замовлення?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div
+                    class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Відправляємо <b>Новою Поштою або Укрпоштою</b> по всій Україні. Доставка займає <b>1–3 робочі дні</b> після підтвердження замовлення. Оплата виключно <b>при отриманні</b> — ризик нульовий.
+                </div>
+            </details>
+
+            <details
+                class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Чи підходить для виноградника та ягідних кущів?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div
+                    class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Так, тример ідеально підходить для обкошування <b>виноградників, малини, смородини</b> та будь-яких доріжок. Завдяки компактності та регулюванню кута нахилу, ви зможете акуратно прибрати траву навіть під кущами та навколо стовбурів дерев не пошкоджуючи їх.
+                </div>
+            </details>
+
+            <details
+                class="group border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary
+                    class="flex items-center justify-between p-5 font-bold text-slate-800 cursor-pointer hover:bg-gray-50 transition-colors">
+                    Чи можна повернути, якщо не підійде?
+                    <span class="transition group-open:rotate-180">
+                        <i class="fa-solid fa-chevron-down text-orange-500"></i>
+                    </span>
+                </summary>
+                <div
+                    class="p-5 text-gray-600 border-t border-gray-100 text-sm md:text-base leading-relaxed bg-gray-50/50">
+                    Так. Ми працюємо відповідно до Закону України "Про захист прав споживачів". Ви маєте <b>14 днів</b> на повернення товару в оригінальній упаковці без пояснення причин. Повернення безкоштовне.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Відгуки клієнтів (Стиль маркетплейсів) -->
+
+
+    <section id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 scroll-mt-32">
+        <div class="bg-white p-6 rounded-lg shadow-sm grid grid-cols-1 md:grid-cols-12 gap-10">
+            <!-- Левая колонка: Статистика -->
+            <div class="md:col-span-4 lg:col-span-3">
+                <h2 class="text-xl font-bold text-slate-800 mb-2">Відгуки клієнтів</h2>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="text-orange-400 text-xl"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <div class="text-lg font-medium text-slate-800">4.8 з 5</div>
+                </div>
+                <div class="text-sm text-slate-500 mb-4 md:mb-6">1,245 глобальних оцінок</div>
+
+                <!-- Прогресс-бары -->
+                <div class="space-y-2 text-sm text-amazon-link mb-4 md:mb-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">5 зірок</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 84%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">84%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">4 зірки</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 10%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">10%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">3 зірки</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 4%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">4%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">2 зірки</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 1%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">1%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-12 amazon-link hover:underline cursor-pointer text-right">1 зірка</span>
+                        <div class="h-4 flex-grow bg-gray-200 border border-gray-300 rounded overflow-hidden">
+                            <div class="h-full bg-orange-400" style="width: 1%;"></div>
+                        </div>
+                        <span class="w-8 text-slate-500 text-right">1%</span>
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <h3 class="font-bold text-slate-800 mb-2">Бажаєте залишити відгук?</h3>
+                <p class="text-xs text-slate-500 mb-4">Поділіться своїми враженнями з іншими покупцями</p>
+                <button onclick="openReviewModal()"
+                    class="w-full bg-white border border-gray-300 hover:bg-gray-50 text-slate-800 font-medium py-1.5 rounded-full shadow-sm text-sm transition-colors">Написати
+                    відгук</button>
+            </div>
+
+            <!-- Правая колонка: Тексты отзывов -->
+            <div class="md:col-span-8 lg:col-span-9">
+
+
+                <h3 class="font-bold text-slate-800 text-lg mb-4 md:mb-6">Топові відгуки з України</h3>
+
+                <div id="new-reviews-container"></div>
+                <!-- Ревью 1 -->
+                <div class="mb-5 md:mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Валентин К.</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Ідеальне рішення для газону</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 12 Квітня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Тример - ідеальне рішення для догляду за газоном. Завдяки його потужному мотору та легкій вазі, косіння трави стало легким та приємним заняттям для мене. Дуже задоволений результатом!</p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно (12)</button>
+                    </div>
+                </div>
+
+                <!-- Ревью 2 -->
+                <div class="mb-5 md:mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Віктор Л.</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Просто і швидко</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 8 Квітня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Не можу уявити свого життя без тримера! Косіння газону стало таким простим та швидким завдяки цій чудовій техніці. Лезо гостре, акумулятор тримає добре. Рекомендую!</p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно (8)</button>
+                    </div>
+                </div>
+
+                <!-- Ревью 3 -->
+                <div class="mb-5 md:mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Сергій П.</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Чудовий сервіс та якісний товар</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 28 Березня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Отримав тример швидко, все повністю відповідає опису на сайті. Усі насадки і акумулятори виявились у повній комплектації, дуже зручно. Сам інструмент працює на відмінно, акуми прийшли вже зарядженими. Дякую магазину за сервіс та якісний товар.
+                    </p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    
+
+
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно (4)</button>
+                    </div>
+                </div>
+
+                <!-- Ревью 4 -->
+                <div class="mb-5 md:mb-8 border-b pb-6">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-user"></i></div>
+                        <span class="text-sm font-medium">Богдан Т.</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-sm text-black">Потужний і надійний помічник</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано 22 Березня 2026 р.</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Підтверджена покупка</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">
+                        Дійсно хороша річ для саду. Косить моментально, взагалі не треба прикладати зусиль! Два акумулятори в комплекті - це супер зручно. Однозначно рекомендую всім, хто цінує свій час та комфорт!
+                    </p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+
+
+
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 text-slate-600 text-xs px-4 py-1 rounded-full shadow-sm">Корисно (7)</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
-    <footer class="bg-slate-900 py-16 text-white text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <h4 class="text-2xl font-black mb-10 italic uppercase">GARDEN<span class="text-orange-500">PRO</span></h4>
-            <div class="flex justify-center gap-8 mb-10 text-slate-400 text-sm font-medium">
-                <a href="policy.html" class="hover:text-white underline decoration-dashed">Політика конфіденційності</a>
-                <a href="offer.html" class="hover:text-white underline decoration-dashed">Публічна оферта</a>
+    <footer class="bg-slate-900 border-t border-slate-700 pt-10 pb-6 text-white text-sm">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-5 md:mb-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold mb-4 text-base">Дізнайтеся про нас більше</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="policy.html" class="hover:underline">Політика конфіденційності</a></li>
+                    <li><a href="#" class="hover:underline">Кар'єра</a></li>
+                    <li><a href="#" class="hover:underline">Прес-релізи</a></li>
+                </ul>
             </div>
-            <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">© 2024 Всі права захищено</p>
+            <div>
+                <h4 class="font-bold mb-4 text-base">Купувати з нами</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="offer.html" class="hover:underline">Оплата і доставка</a></li>
+                    <li><a href="offer.html" class="hover:underline">Повернення та обмін</a></li>
+                    <li><a href="offer.html" class="hover:underline">Гарантія</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-base">Співпраця</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:underline">Стати партнером</a></li>
+                    <li><a href="#" class="hover:underline">Оптові ціни</a></li>
+                    <li><a href="#" class="hover:underline">Дропшипінг</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-base">Служба підтримки</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:underline">Зв'язатися з нами</a></li>
+                    <li><a href="#" class="hover:underline">Мій акаунт</a></li>
+                    <li><a href="#" class="hover:underline">Допомога</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-slate-500 pt-6 border-t border-slate-700">
+            <span class="font-bold text-lg tracking-tight uppercase text-white mb-2 block">GARDEN<span
+                    class="text-orange-500">PRO</span></span>
+            © 2018-2026, GardenPRO.com. Акумуляторна коса Procraft PTA25 (2 акб). Даний лендінг є демонстрацією роботи.
         </div>
     </footer>
 
-    <script src="./order.js"></script>
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            menu.classList.toggle('hidden');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        }
+    <!-- Modal HTML -->
+    <div id="reviewModal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden p-6 relative">
+            <button onclick="closeReviewModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i
+                    class="fa-solid fa-xmark text-2xl"></i></button>
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">Написати відгук</h2>
 
+            <form id="reviewForm" onsubmit="submitReview(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Загальна оцінка</label>
+                    <div class="flex gap-2 text-3xl cursor-pointer">
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(1)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(2)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(3)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(4)"></i>
+                        <i class="star-btn fa-solid fa-star text-orange-400" onclick="setRating(5)"></i>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Представтесь</label>
+                    <input type="text" id="reviewName" required placeholder="Ваше Ім'я"
+                        class="w-full text-base p-3 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Ваш текст відгуку</label>
+                    <textarea id="reviewText" required rows="4" placeholder="Що вам сподобалося чи не сподобалося?"
+                        class="w-full text-base p-3 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"></textarea>
+                </div>
+
+                <div class="mb-4 md:mb-6">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Прикріпити фото (за бажанням)</label>
+                    <div class="flex items-center gap-4">
+                        <div class="relative w-full border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-orange-500 transition-colors cursor-pointer bg-slate-50"
+                            onclick="document.getElementById('reviewImageInput').click()">
+                            <input type="file" id="reviewImageInput" accept="image/*" class="hidden">
+                            <i class="fa-solid fa-camera text-2xl text-gray-400 mb-2"></i>
+                            <div class="text-sm text-gray-500">Натисніть щоб обрати фото зі смартфона</div>
+                        </div>
+                        <div id="imagePreviewContainer"
+                            class="hidden relative w-32 h-32 border border-gray-200 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                            <img loading="lazy" id="reviewImagePreview" src="" class="w-full h-full object-cover">
+                            <button type="button" onclick="removeImage(); event.stopPropagation();"
+                                class="absolute top-1 right-1 bg-black/50 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-black/70"><i
+                                    class="fa-solid fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-black text-base rounded-full py-3 shadow-md font-bold transition-transform hover:-translate-y-0.5">
+                    Опублікувати відгук
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- JS Functionality -->
+    <script>
         function changeImage(element, src) {
             const mainImg = document.getElementById('main-image');
             mainImg.src = src;
+            if (mainImg.srcset) {
+                mainImg.srcset = src;
+            }
             document.querySelectorAll('.thumbnail').forEach(el => el.classList.remove('active'));
             element.classList.add('active');
         }
-    </script>
-</body>
 
+        // Modal Logic
+        const modal = document.getElementById('reviewModal');
+        let currentRating = 5;
+
+        function openReviewModal() {
+            modal.classList.remove('hidden');
+        }
+        function closeReviewModal() {
+            modal.classList.add('hidden');
+        }
+        function setRating(stars) {
+            currentRating = stars;
+            const starElements = document.querySelectorAll('.star-btn');
+            starElements.forEach((el, index) => {
+                if (index < stars) {
+                    el.classList.remove('fa-regular', 'text-gray-300');
+                    el.classList.add('fa-solid', 'text-orange-400');
+                } else {
+                    el.classList.remove('fa-solid', 'text-orange-400');
+                    el.classList.add('fa-regular', 'text-gray-300');
+                }
+            });
+        }
+
+        let attachedImageSrc = null;
+        document.getElementById('reviewImageInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    attachedImageSrc = e.target.result;
+                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
+                    document.getElementById('reviewImagePreview').src = attachedImageSrc;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function removeImage() {
+            attachedImageSrc = null;
+            document.getElementById('reviewImageInput').value = '';
+            document.getElementById('imagePreviewContainer').classList.add('hidden');
+        }
+
+        function submitReview(event) {
+            event.preventDefault();
+            const text = document.getElementById('reviewText').value;
+            const name = document.getElementById('reviewName').value;
+
+            // Build stars HTML
+            let starsHtml = '';
+            for (let i = 0; i < 5; i++) {
+                if (i < currentRating) starsHtml += '<i class="fa-solid fa-star"></i>';
+                else starsHtml += '<i class="fa-regular fa-star"></i>';
+            }
+
+            let date = new Date().toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' });
+
+            // Build new review HTML
+            const newReview = `
+                <div class="mb-5 md:mb-8 border-b pb-6 bg-orange-50/50 p-4 rounded-xl shadow-sm animate-[pulse_1s_ease-in-out]">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold">${name.charAt(0).toUpperCase()}</div>
+                        <span class="text-sm font-medium">${name}</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="text-orange-400 text-xs">${starsHtml}</div>
+                        <span class="font-bold text-sm text-black">Новий відгук</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-2">Відгук написано ${date}</div>
+                    <div class="text-xs text-orange-600 font-bold mb-2">Зареєстрований покупець</div>
+                    <p class="text-slate-800 text-sm mb-1 leading-relaxed line-clamp-3 md:line-clamp-none transition-all duration-300">${text}</p>
+                    <button onclick="toggleReview(this)" class="text-orange-500 font-bold text-xs mb-3 md:hidden outline-none">Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i></button>
+                    ${attachedImageSrc ? `<img loading="lazy" src="${attachedImageSrc}" class="w-32 h-32 object-cover rounded-md mb-3 border border-gray-200 cursor-pointer hover:scale-105 transition-transform" onclick="window.open('${attachedImageSrc}')">` : ''}
+                    <div class="flex gap-3 mt-2">
+                        <button class="bg-white border border-gray-300 hover:bg-gray-50 text-slate-600 text-xs px-4 py-1.5 rounded-full shadow-sm">Корисно (0)</button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('new-reviews-container').insertAdjacentHTML('afterbegin', newReview);
+
+            // Format Reset & Close
+            document.getElementById('reviewForm').reset();
+            setRating(5);
+            removeImage();
+            closeReviewModal();
+
+            // Scroll to reviews
+            document.getElementById('reviews').scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Countdown Timer
+        (function() {
+            // Random initial time between 1h 12min and 3h 59min to look organic
+            const stored = sessionStorage.getItem('cdEnd');
+            let endTime;
+            if (stored) {
+                endTime = parseInt(stored);
+            } else {
+                const mins = Math.floor(Math.random() * 168) + 72; // 72–240 min
+                endTime = Date.now() + mins * 60 * 1000;
+                sessionStorage.setItem('cdEnd', endTime);
+            }
+            function pad(n) { return String(n).padStart(2, '0'); }
+            function tick() {
+                const diff = endTime - Date.now();
+                if (diff <= 0) {
+                    // reset
+                    const mins = Math.floor(Math.random() * 60) + 20;
+                    endTime = Date.now() + mins * 60 * 1000;
+                    sessionStorage.setItem('cdEnd', endTime);
+                    return;
+                }
+                const h = Math.floor(diff / 3600000);
+                const m = Math.floor((diff % 3600000) / 60000);
+                const s = Math.floor((diff % 60000) / 1000);
+                document.getElementById('cd-hours').textContent = pad(h);
+                document.getElementById('cd-mins').textContent = pad(m);
+                document.getElementById('cd-secs').textContent = pad(s);
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
+
+        // Social Proof Toasts
+        (function() {
+            const names = [
+                'Олена з Харкова', 'Михайло з Київа', 'Наталія з Одеси',
+                'Василь зі Львова', 'Тетяна з Дніпра', 'Андрій з Полтави',
+                'Ірина з Запоріжжя', 'Петро з Вінниці', 'Людмила з Херсона'
+            ];
+            const toast = document.getElementById('proof-toast');
+            const namEl = document.getElementById('toast-name');
+            let idx = Math.floor(Math.random() * names.length);
+            function showToast() {
+                namEl.textContent = names[idx % names.length];
+                idx++;
+                toast.classList.add('show');
+                setTimeout(() => { toast.classList.remove('show'); }, 4000);
+                // next in 18–35 sec
+                setTimeout(showToast, (Math.random() * 17000) + 18000);
+            }
+            // first after 8 sec
+            setTimeout(showToast, 8000);
+        })();
+
+        // Hide floating CTA when buy-box is visible
+        (function() {
+            const buyBox = document.getElementById('buy-box');
+            const floatCta = document.getElementById('floating-cta');
+            if (!buyBox || !floatCta) return;
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    floatCta.style.opacity = e.isIntersecting ? '0' : '1';
+                    floatCta.style.pointerEvents = e.isIntersecting ? 'none' : 'auto';
+                });
+            }, { threshold: 0.3 });
+            obs.observe(buyBox);
+        })();
+
+        // Мобільне меню
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Плавний скролл при клике на ссылки – з урахуванням висоти фіксованого хедеру
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '' || targetId === 'javascript:void(0)') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Функція для приховування/показу відгуків на мобільному
+        window.toggleReview = function (btn) {
+            const p = btn.previousElementSibling;
+            if (p.classList.contains('line-clamp-3')) {
+                p.classList.remove('line-clamp-3');
+                btn.innerHTML = 'Згорнути <i class="fa-solid fa-chevron-up text-[10px] ml-0.5"></i>';
+            } else {
+                p.classList.add('line-clamp-3');
+                btn.innerHTML = 'Читати ще <i class="fa-solid fa-chevron-down text-[10px] ml-0.5"></i>';
+            }
+        };
+    </script>
+    <script>
+      setTimeout(function() {
+        // Затримка всіх трекерів на 3.5 секунди щоб віддати 100% інтернету для LCP
+        var gtm = document.createElement('script');
+        gtm.async = true;
+        gtm.src = 'https://www.googletagmanager.com/gtag/js?id=G-MV1H2F0N3B';
+        document.body.appendChild(gtm);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-MV1H2F0N3B");
+
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1579006016495944');
+        fbq('track', 'PageView');
+
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "w8mupgpghx");
+      }, 7000);
+    </script>
+    <noscript><img loading="lazy" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1579006016495944&ev=PageView&noscript=1"/></noscript>
+    <script src="./order.js" defer></script>
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 p-3 z-[9999] md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-5px_20px_rgba(0,0,0,0.05)] flex items-center justify-between gap-4 transition-all duration-500 transform translate-y-full opacity-0 pointer-events-none">
+        <div class="flex flex-col pl-2">
+            <div class="text-[11px] font-bold text-gray-400 line-through leading-none mb-1">3069 грн</div>
+            <div class="text-[22px] font-black text-red-600 tracking-tight leading-none">1995 <span class="text-sm">грн</span></div>
+        </div>
+        <a href="#buy-box" class="bg-orange-500 text-white font-black py-3 px-4 rounded-xl text-center uppercase tracking-widest shadow-[0_5px_15px_rgba(255,102,0,0.3)] active:scale-95 transition-transform flex flex-shrink-0 items-center justify-center pulse-btn w-auto min-w-[130px]">
+            Замовити
+        </a>
+    </div>
+
+    <script>
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (!scrollTimeout) {
+                window.requestAnimationFrame(() => {
+                    const stickyCta = document.getElementById('sticky-cta');
+                    if (window.scrollY > 600) {
+                        stickyCta.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        stickyCta.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                    scrollTimeout = false;
+                });
+                scrollTimeout = true;
+            }
+        }, { passive: true });
+
+        // Aggressive Autoplay for Mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '10% 0px', // Начинаем загрузку чуть раньше
+                threshold: 0.1 // Срабатываем, когда видно хотя бы 10%
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    if (entry.isIntersecting) {
+                        video.dataset.shouldPlay = 'true';
+                        playVideo(video);
+                    } else {
+                        video.dataset.shouldPlay = 'false';
+                        video.pause();
+                    }
+                });
+            }, observerOptions);
+
+            function playVideo(video) {
+                video.muted = true;
+                video.setAttribute('playsinline', '');
+                
+                let playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // Если автоплей заблокирован, он запустится при первом клике/скролле ниже
+                        console.log("Autoplay waiting for interaction");
+                    });
+                }
+            }
+
+            videos.forEach(video => {
+                observer.observe(video);
+                // Принудительно ставим на паузу изначально
+                video.pause();
+            });
+
+            // "Разблокировка" видео при первом взаимодействии пользователя с экраном
+            const unlock = function() {
+                videos.forEach(video => {
+                    if (video.dataset.shouldPlay === 'true') {
+                        playVideo(video);
+                    }
+                });
+                document.removeEventListener('touchstart', unlock);
+                document.removeEventListener('mousedown', unlock);
+                document.removeEventListener('scroll', unlock);
+            };
+
+            document.addEventListener('touchstart', unlock, {passive: true});
+            document.addEventListener('mousedown', unlock, {passive: true});
+            document.addEventListener('scroll', unlock, {passive: true});
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+</body>
 </html>
