@@ -10,7 +10,8 @@
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"></noscript>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <!-- Preload hero image for fast LCP -->
@@ -91,6 +92,12 @@ body{font-family:ui-sans-serif, system-ui, sans-serif;background-color:#f8f9fa}
 .w-\[140px\]{width:140px}
 .w-\[200px\]{width:200px}
 .w-\[220px\]{width:220px}
+        /* Video Facade Styles */
+        .video-facade { position: relative; cursor: pointer; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; }
+        .video-facade .play-icon { position: absolute; z-index: 10; width: 64px; height: 64px; background: rgba(249,115,22,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .video-facade:hover .play-icon { transform: scale(1.1); }
+        .video-facade .play-icon::after { content: ""; display: block; width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid #fff; margin-left: 5px; }
+        .video-facade img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
 .w-\[240px\]{width:240px}
 .py-16{padding-top:4rem;padding-bottom:4rem}
 .py-20{padding-top:5rem;padding-bottom:5rem}
@@ -247,7 +254,7 @@ body{font-family:ui-sans-serif, system-ui, sans-serif;background-color:#f8f9fa}
 .snap-mandatory{--tw-scroll-snap-strictness:mandatory}
 .snap-center{scroll-snap-align:center}
 .scroll-mt-32{scroll-margin-top:8rem}
-.scroll-smooth{scroll-behavior:smooth}
+.scroll-smooth{scroll-behavior:smooth;font-display:swap}
 .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .flex-col{flex-direction:column}
@@ -777,28 +784,28 @@ details summary::-webkit-details-marker{display:none}
                 <!-- Thumbnails -->
                 <div class="flex gap-2 md:gap-3 overflow-x-auto pb-1 justify-between hide-scroll">
                     <div class="thumbnail active w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
-                        onclick="changeImage(this, './img/trimer-pta25-banner.jpg')">
+                        onclick="changeImage(this, './img/trimer-pta25-banner.webp')">
                         <img src="./img/trimer-pta25-banner-thumb.jpg" alt="Характеристики" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
                         <div
                             class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
                             Огляд</div>
                     </div>
                     <div class="thumbnail w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
-                        onclick="changeImage(this, './img/trimer-pta25-lifestyle-new.jpg')">
+                        onclick="changeImage(this, './img/trimer-pta25-lifestyle-new.webp')">
                         <img src="./img/trimer-pta25-lifestyle-new-thumb.jpg" alt="У роботі" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
                         <div
                             class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
                             У роботі</div>
                     </div>
                     <div class="thumbnail w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
-                        onclick="changeImage(this, './img/trimer-pta25-hero-new.jpg')">
+                        onclick="changeImage(this, './img/trimer-pta25-hero-new.webp')">
                         <img src="./img/trimer-pta25-hero-new-thumb.jpg" alt="Тример Procraft" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
                         <div
                             class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
                             Керма</div>
                     </div>
                     <div class="thumbnail w-[23.5%] relative rounded-xl cursor-pointer shadow-sm overflow-hidden"
-                        onclick="changeImage(this, './img/trimer-pta25-kit-new.jpg')">
+                        onclick="changeImage(this, './img/trimer-pta25-kit-new.webp')">
                         <img src="./img/trimer-pta25-kit-new-thumb.jpg" alt="Комплектація" width="120" height="80" class="w-full h-16 md:h-20 object-cover" decoding="async">
                         <div
                             class="absolute bottom-0 w-full bg-black/70 text-white text-[8px] md:text-[10px] text-center py-0.5 leading-tight uppercase font-bold">
@@ -879,7 +886,7 @@ details summary::-webkit-details-marker{display:none}
                 </div>
             </div>
             <div class="w-[240px] flex-shrink-0 card bg-white/5 p-2 rounded-2xl border border-white/10">
-                <img src="./img/trimer-pta25-lifestyle.jpg" alt="Task 2" loading="lazy" class="w-full h-50 object-cover rounded-xl mb-4">
+                <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Task 2" loading="lazy" class="w-full h-50 object-cover rounded-xl mb-4">
                 <div class="p-4">
                     <h5 class="font-black text-sm uppercase text-action mb-2">Сталевий диск</h5>
                     <p class="text-xs text-gray-400">Легко зрізає товсті чагарники, колючки та навіть молоду поросль дерев.</p>
@@ -960,88 +967,81 @@ details summary::-webkit-details-marker{display:none}
         </div>
 
         <div class="space-y-10">
-            <!-- Video 1 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xs italic">1</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Робота на відкритому газоні</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%812.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%812.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" data-video-src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%812.mov" onclick="loadVideo(this)">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
 
-            <!-- Video 2 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-xs italic">2</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Густий бур'ян та висока трава</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%811.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%811.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" data-video-src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%811.mov" onclick="loadVideo(this)">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
 
-            <!-- Video 3 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs italic">3</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Складні зони та перешкоди</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%813-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%813-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" data-video-src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%813-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE.mov" onclick="loadVideo(this)">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
 
-            <!-- Video 4 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs italic">4</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Ергономіка та зручність керування</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%814-%D0%A0%D1%83%D1%87%D0%BA%D0%B0.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%814-%D0%A0%D1%83%D1%87%D0%BA%D0%B0.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" onclick="loadVideo(this, './img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%814-%D0%A0%D1%83%D1%87%D0%BA%D0%B0.mov')">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
 
-            <!-- Video 5 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-xs italic">5</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Потужність ріжучої системи</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%815-%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%815-%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" onclick="loadVideo(this, './img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%815-%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0.mov')">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
 
-            <!-- Video 6 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs italic">6</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Ефективність на складних ділянках</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%816.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%816.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" onclick="loadVideo(this, './img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%816.mov')">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
 
-            <!-- Video 7 -->
             <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100">
                 <div class="p-4 border-b border-slate-50 flex items-center gap-3">
                     <span class="w-7 h-7 rounded-full bg-cyan-600 text-white flex items-center justify-center font-bold text-xs italic">7</span>
                     <h3 class="font-black text-sm uppercase tracking-tight text-slate-800">Повний огляд можливостей</h3>
                 </div>
-                <video controls loop muted autoplay playsinline preload="auto" class="w-full aspect-video object-cover" poster="./img/trimer-pta25-lifestyle.jpg">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%817.mov#t=0.001" type="video/quicktime">
-                    <source src="./img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%817.mov#t=0.001" type="video/mp4">
-                </video>
+                <div class="video-facade aspect-video" onclick="loadVideo(this, './img/%D0%9F%D0%BE%D0%BA%D0%BE%D1%817.mov')">
+                    <img src="./img/trimer-pta25-lifestyle-new.webp" alt="Video Review" loading="lazy">
+                    <div class="play-icon"></div>
+                </div>
             </div>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
@@ -1690,12 +1690,12 @@ details summary::-webkit-details-marker{display:none}
     <script>
         function changeImage(element, src) {
             const mainImg = document.getElementById('main-image');
+            if (mainImg.src.includes(src.split('/').pop())) return;
+            
             mainImg.src = src;
-            if (mainImg.srcset) {
-                mainImg.srcset = src;
-            }
-            document.querySelectorAll('.thumbnail').forEach(el => el.classList.remove('active'));
-            element.classList.add('active');
+            mainImg.srcset = ""; // Clear srcset to prioritize new src
+            
+            document.querySelectorAll('.thumbnail').forEach(el => el.classList.toggle('active', el === element));
         }
 
         // Modal Logic
@@ -1959,64 +1959,6 @@ details summary::-webkit-details-marker{display:none}
             }
         }, { passive: true });
 
-        // Aggressive Autoplay for Mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const videos = document.querySelectorAll('video');
-            
-            const observerOptions = {
-                root: null,
-                rootMargin: '10% 0px', // Начинаем загрузку чуть раньше
-                threshold: 0.1 // Срабатываем, когда видно хотя бы 10%
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const video = entry.target;
-                    if (entry.isIntersecting) {
-                        video.dataset.shouldPlay = 'true';
-                        playVideo(video);
-                    } else {
-                        video.dataset.shouldPlay = 'false';
-                        video.pause();
-                    }
-                });
-            }, observerOptions);
-
-            function playVideo(video) {
-                video.muted = true;
-                video.setAttribute('playsinline', '');
-                
-                let playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        // Если автоплей заблокирован, он запустится при первом клике/скролле ниже
-                        console.log("Autoplay waiting for interaction");
-                    });
-                }
-            }
-
-            videos.forEach(video => {
-                observer.observe(video);
-                // Принудительно ставим на паузу изначально
-                video.pause();
-            });
-
-            // "Разблокировка" видео при первом взаимодействии пользователя с экраном
-            const unlock = function() {
-                videos.forEach(video => {
-                    if (video.dataset.shouldPlay === 'true') {
-                        playVideo(video);
-                    }
-                });
-                document.removeEventListener('touchstart', unlock);
-                document.removeEventListener('mousedown', unlock);
-                document.removeEventListener('scroll', unlock);
-            };
-
-            document.addEventListener('touchstart', unlock, {passive: true});
-            document.addEventListener('mousedown', unlock, {passive: true});
-            document.addEventListener('scroll', unlock, {passive: true});
-        });
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
