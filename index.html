@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="uk" class="scroll-smooth">
 <head>
+    <meta name="facebook-domain-verification" content="h5jk2o7ghu7ybfhqgniru6axc51jt6" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV1H2F0N3B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-MV1H2F0N3B");
+    </script>
     <meta charset="UTF-8"><link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Професійний Садовий Інструмент | Знижки до -40%</title>
@@ -16,6 +26,12 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1579006016495944');
     fbq('track', 'PageView');
+    // Microsoft Clarity
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w8mupgpghx");
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1579006016495944&ev=PageView&noscript=1"
@@ -221,7 +237,7 @@
                         <div class="flex items-end justify-between mb-6">
                             <div>
                                 <div class="text-slate-400 line-through text-sm">3 499 грн</div>
-                                <div class="text-3xl font-black text-red-600">1 349 <span class="text-lg">грн</span></div>
+                                <div class="text-3xl font-black text-red-600">1 299 <span class="text-lg">грн</span></div>
                             </div>
                         </div>
                         <a href="sekator.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
@@ -258,7 +274,7 @@
 
                 <!-- Товар 3 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
-                    <a href="trimmer.html" class="relative bg-slate-100 aspect-square flex items-center justify-center p-6 pb-0 overflow-hidden block">
+                    <a href="trimer.html" class="relative bg-slate-100 aspect-square flex items-center justify-center p-6 pb-0 overflow-hidden block">
                         <span class="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-lg text-sm z-10">-45%</span>
                         <img src="https://images.unsplash.com/photo-1592651034057-074472d825ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Кущоріз" class="w-full h-full object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-500">
                     </a>
@@ -275,7 +291,7 @@
                                 <div class="text-3xl font-black text-red-600">1 599 <span class="text-lg">грн</span></div>
                             </div>
                         </div>
-                        <a href="trimmer.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
+                        <a href="trimer.html" class="block w-full text-center border-2 border-brand-500 text-brand-600 hover:bg-brand-50 font-bold py-3 rounded-xl transition-colors mt-auto">
                             Перейти до товару
                         </a>
                     </div>
@@ -520,7 +536,7 @@
 
                 <!-- Форма -->
                 <div class="md:w-1/2 p-8 md:p-12 bg-white">
-                    <form onsubmit="sendOrderToTelegram(event, document.getElementById('product-select').options[document.getElementById('product-select').selectedIndex].text)" class="space-y-5">
+                    <form onsubmit="handleOrder(event, document.getElementById('product-select').options[document.getElementById('product-select').selectedIndex].text)" class="space-y-5">
                         <h3 class="text-xl font-bold text-dark mb-6">Оформлення замовлення</h3>
                         
                         <div>
@@ -663,7 +679,7 @@
         <div class="bg-white h-safe-bottom" style="height: env(safe-area-inset-bottom, 0px);"></div>
     </div>
 
-    <script src="./telegram.js"></script>
+    <script src="./order.js"></script>
     <script>
         // Sticky CTA — show after scroll, hide when #order is visible
         const stickyCta = document.getElementById('sticky-cta');

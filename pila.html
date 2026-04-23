@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Procraft PTA25 — Потужність та Свобода</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        procraft: '#264d28', // Procraft Green
+                        action: '#ff9800',  // Action Orange
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        .pulse-btn {
+            animation: pulse-orange 2s infinite;
+        }
+        @keyframes pulse-orange {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(255, 152, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 152, 0, 0); }
+        }
+
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 16px;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #eee;
+        }
+
+        .sticky-header-price {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: #264d28;
+            color: white;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 900;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+        }
+        .sticky-header-price.visible { transform: translateY(0); }
+
+        .hotspot-line {
+            position: absolute;
+            background: #ff9800;
+            height: 2px;
+            transform-origin: left;
+        }
+        .hotspot-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff9800;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff9800;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 selection:bg-procraft selection:text-white">
+
+    <!-- Sticky Header Price (Shows on scroll) -->
+    <div id="sticky-header" class="sticky-header-price md:hidden">
+        <div class="flex items-center gap-2">
+            <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase">Акція -35%</span>
+            <span>PTA25 40V</span>
+        </div>
+        <div class="text-action">1995 грн</div>
+    </div>
+
+    <!-- Sticky Footer CTA -->
+    <div id="sticky-cta" class="sticky-footer md:hidden flex items-center justify-between gap-4 p-3 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-5px_20px_rgba(0,0,0,0.05)] transition-all duration-500 transform translate-y-full opacity-0 pointer-events-none">
+        <div class="flex flex-col pl-2">
+            <div class="text-[11px] font-bold text-gray-400 line-through leading-none mb-1">3069 грн</div>
+            <div class="text-[22px] font-black text-red-600 tracking-tight leading-none">1995 <span class="text-sm">грн</span></div>
+        </div>
+        <a href="#order" class="bg-action text-white font-black py-3 px-4 rounded-xl text-center uppercase tracking-widest shadow-[0_5px_15px_rgba(255,152,0,0.3)] active:scale-95 transition-transform flex flex-shrink-0 items-center justify-center pulse-btn w-auto min-w-[130px]">
+            Замовити
+        </a>
+    </div>
+
+    <!-- Block 1: Hero (The Hook + Visual Power) -->
+    <section class="relative">
+        <img src="./img/trimer-pta25-banner.jpg" alt="Procraft PTA25" class="w-full h-auto">
+        <div class="absolute top-4 left-4">
+            <div class="bg-procraft text-white px-3 py-1 text-[10px] font-black uppercase rounded shadow-lg">Офіційний дилер Procraft</div>
+        </div>
+        
+        <div class="px-5 py-8 bg-gradient-to-b from-white to-gray-50">
+            <h1 class="text-2xl font-black text-procraft mb-4 leading-tight">
+                Акумуляторна Коса Procraft PTA25 (40V): <br>
+                <span class="text-action">Потужність бензину</span> без зайвого клопоту!
+            </h1>
+            
+            <div class="flex items-center gap-2 text-xs font-bold text-gray-500 mb-6 italic">
+                <i class="fa-solid fa-box-open text-procraft"></i>
+                Комплект "Все включено": Коса + 2 АКБ + Зарядка + Ножі.
+            </div>
+
+            <div class="flex items-center gap-6 mb-8 bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                <div>
+                    <span class="text-[10px] uppercase text-gray-400 font-black block mb-1">Стара ціна</span>
+                    <span class="text-xl line-through text-gray-300 font-bold">3069 грн</span>
+                </div>
+                <div class="flex-grow">
+                    <span class="text-[10px] uppercase text-procraft font-black block mb-1">Ціна за акцією</span>
+                    <div class="flex items-center gap-2">
+                        <span class="text-4xl font-black text-procraft tracking-tighter">1995</span>
+                        <span class="text-xl font-black text-procraft">грн</span>
+                    </div>
+                </div>
+                <div class="bg-red-600 text-white text-[12px] font-black w-14 h-14 flex items-center justify-center rounded-full transform rotate-12 shadow-md">
+                    -35%
+                </div>
+            </div>
+
+            <a href="#order" class="block w-full bg-action text-white font-black py-5 rounded-xl text-center uppercase tracking-widest shadow-xl pulse-btn text-lg">
+                ЗАМОВИТИ ЗІ ЗНИЖКОЮ
+            </a>
+        </div>
+    </section>
+
+    <!-- Block 2: Aggressive Pain Points (PAS Logic) -->
+    <section class="py-12 px-5 bg-gray-50">
+        <h2 class="text-xl font-black text-center mb-8 uppercase italic leading-tight">Досить терпіти дискомфорт <br> <span class="text-red-600 underline">застарілих інструментів!</span></h2>
+        
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-8">
+            <img src="./img/comparison.png" alt="Pain vs Solution" class="w-full h-auto">
+        </div>
+
+        <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-500">
+                <i class="fa-solid fa-circle-xmark text-red-500 text-xl mt-1"></i>
+                <p class="text-sm font-bold text-gray-600 leading-tight">Досить терпіти запах бензину, мастила та брудні руки!</p>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-500">
+                <i class="fa-solid fa-circle-xmark text-red-500 text-xl mt-1"></i>
+                <p class="text-sm font-bold text-gray-600 leading-tight">Досить розплутувати нескінченні дроти та шукати подовжувачі!</p>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-500">
+                <i class="fa-solid fa-circle-xmark text-red-500 text-xl mt-1"></i>
+                <p class="text-sm font-bold text-gray-600 leading-tight">Досить навантажувати спину важким застарілим інструментом!</p>
+            </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-procraft text-white rounded-2xl text-center">
+            <h3 class="font-black text-lg mb-2 uppercase tracking-tight">Рішення є: Procraft PTA25</h3>
+            <p class="text-xs text-green-100 font-medium">Просто натисніть одну кнопку та косіть із справжнім задоволенням.</p>
+        </div>
+    </section>
+
+    <!-- Block 3: Visual Anatomy (Deep Product Show) -->
+    <section class="py-16 px-5 bg-white overflow-hidden">
+        <div class="text-center mb-10">
+            <h2 class="text-xs font-black text-gray-400 uppercase tracking-[0.3em] mb-2">Технічна досконалість</h2>
+            <h3 class="text-2xl font-black uppercase text-procraft leading-none italic">Анатомія Потужності</h3>
+        </div>
+
+        <div class="relative">
+            <img src="./img/trimer-pta25-anatomy-new.jpg" alt="Anatomy" class="w-full h-auto py-10 transform scale-125 translate-x-10">
+            
+            <!-- Hotspots simulated by grid/list for mobile clarity -->
+            <div class="space-y-6 mt-12 relative z-10">
+                <div class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-full bg-procraft text-action flex items-center justify-center shrink-0 shadow-lg font-black italic">40V</div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Безщітковий двигун</h4>
+                        <p class="text-xs text-gray-500">Працює у 5 разів довше, не перегрівається та видає божевільну потужність.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-full bg-procraft text-action flex items-center justify-center shrink-0 shadow-lg font-black italic">X2</div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Робота від 2-х АКБ</h4>
+                        <p class="text-xs text-gray-500">40 вольт реальної сили. Косить навіть густий бур'ян та дрібні чагарники.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-full bg-procraft text-action flex items-center justify-center shrink-0 shadow-lg font-black"><i class="fa-solid fa-car"></i></div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Розбірна штанга</h4>
+                        <p class="text-xs text-gray-500">Посилена конструкція, що миттєво складається та вміщується в будь-яке авто.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-full bg-procraft text-action flex items-center justify-center shrink-0 shadow-lg font-black"><i class="fa-solid fa-hands"></i></div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase mb-1">Антивібраційна система</h4>
+                        <p class="text-xs text-gray-500">Спеціальна підвіска та ручки бережуть ваші суглоби від перевтоми.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 4: Capability Demo (Action Visuals) -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="px-5 mb-10">
+            <h2 class="text-2xl font-black uppercase italic leading-none mb-4">Один інструмент для <br> <span class="text-action">всього саду.</span></h2>
+            <p class="text-sm text-gray-400">Потужності вистачить на будь-які завдання, від м'якого газону до диких зарослів.</p>
+        </div>
+
+        <div class="flex overflow-x-auto gap-4 px-5 no-scrollbar pb-10">
+            <div class="min-w-[85vw] card bg-white/5 p-2 rounded-2xl border border-white/10">
+                <img src="./img/trimer-pta25-comparison.jpg" alt="Task 1" class="w-full h-56 object-cover rounded-xl mb-4">
+                <div class="p-4">
+                    <h5 class="font-black text-sm uppercase text-action mb-2">Робота ліскою</h5>
+                    <p class="text-xs text-gray-400">Ідеально ріже високу траву та соковиту зелень на великих площах.</p>
+                </div>
+            </div>
+            <div class="min-w-[85vw] card bg-white/5 p-2 rounded-2xl border border-white/10">
+                <img src="./img/trimer-pta25-lifestyle.jpg" alt="Task 2" class="w-full h-56 object-cover rounded-xl mb-4">
+                <div class="p-4">
+                    <h5 class="font-black text-sm uppercase text-action mb-2">Сталевий диск</h5>
+                    <p class="text-xs text-gray-400">Легко зрізає товсті чагарники, колючки та навіть молоду поросль дерев.</p>
+                </div>
+            </div>
+            <div class="min-w-[85vw] card bg-white/5 p-2 rounded-2xl border border-white/10">
+                <div class="w-full h-56 bg-slate-800 rounded-xl mb-4 flex items-center justify-center">
+                    <i class="fa-solid fa-play-circle text-5xl text-action"></i>
+                </div>
+                <div class="p-4">
+                    <h5 class="font-black text-sm uppercase text-action mb-2">Чистота країв</h5>
+                    <p class="text-xs text-gray-400">Акуратно рівняє краї газону біля парканів, доріжок та дерев.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 5: "The God-View" Kit (Visual Trust) -->
+    <section class="py-20 px-5 bg-white">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-black uppercase text-procraft leading-tight italic">Що ви отримаєте <br> в коробці?</h2>
+            <p class="text-xs font-bold text-gray-400 mt-2 uppercase tracking-widest">Жодних прихованих покупок. Розпакуй та працюй!</p>
+        </div>
+
+        <div class="relative mb-10">
+            <img src="./img/kit-godview.png" alt="God View Kit" class="w-full h-auto rounded-3xl shadow-2xl grayscale-[0.3]">
+            <div class="absolute -bottom-4 right-4 bg-procraft text-action px-6 py-2 rounded-full font-black text-sm shadow-xl">
+                 MAX BUNDLE
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+            <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <span class="w-8 h-8 rounded-full bg-procraft text-white flex items-center justify-center font-black text-xs">1</span>
+                <span class="text-sm font-black uppercase italic">Коса Procraft PTA25</span>
+            </div>
+            <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <span class="w-8 h-8 rounded-full bg-procraft text-white flex items-center justify-center font-black text-xs">2</span>
+                <span class="text-sm font-black uppercase italic">2 Посилені акумулятори Li-ion</span>
+            </div>
+            <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <span class="w-8 h-8 rounded-full bg-procraft text-white flex items-center justify-center font-black text-xs">3</span>
+                <span class="text-sm font-black uppercase italic">Подвійний швидкий зарядний пристрій</span>
+            </div>
+            <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <span class="w-8 h-8 rounded-full bg-procraft text-white flex items-center justify-center font-black text-xs">4</span>
+                <span class="text-sm font-black uppercase italic">3-х лопатевий сталевий ніж + Котушка</span>
+            </div>
+            <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <span class="w-8 h-8 rounded-full bg-procraft text-white flex items-center justify-center font-black text-xs">5</span>
+                <span class="text-sm font-black uppercase italic">Ремінь на плече + Набір ключів</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 6: Social Proof & Urgency -->
+    <section class="py-16 px-5 bg-gradient-to-b from-gray-50 to-white">
+        <div class="mb-12">
+            <div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm mb-8 border border-red-100">
+                <div class="font-black text-xs uppercase text-red-600 animate-pulse">
+                    🔥 Залишилось всього 6 шт. за акцією
+                </div>
+                <div class="font-black text-procraft text-sm" id="timer">14:59</div>
+            </div>
+
+            <h3 class="text-xl font-black uppercase italic text-center mb-8">Нам довіряють господарі:</h3>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                     <div class="flex text-action text-xs gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                     <p class="text-sm font-medium italic mb-4">"Потужність реально як у моєї старої бензинової, але працює тихіше чим електрочайник. Сусіди більше не скаржаться, а в мене руки чисті!"</p>
+                     <div class="flex items-center gap-3">
+                         <div class="w-8 h-8 bg-procraft rounded-full flex items-center justify-center text-white text-[10px] font-black italic">О</div>
+                         <div class="font-black text-[10px] uppercase text-gray-400">Олександр, м. Вінниця</div>
+                     </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                     <div class="flex text-action text-xs gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                     <p class="text-sm font-medium italic mb-4">"Комплект дуже багатий. Прийшов на пошту, перевірив — все якісно. Двох АКБ мені вистачає на всю ділянку навколо дому. Рекомендую!"</p>
+                     <div class="flex items-center gap-3">
+                         <div class="w-8 h-8 bg-procraft rounded-full flex items-center justify-center text-white text-[10px] font-black italic">М</div>
+                         <div class="font-black text-[10px] uppercase text-gray-400">Микола, приватний сектор</div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 7: Final Conversion Block -->
+    <section id="order" class="py-20 px-5 bg-white mb-20 scroll-mt-20">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-black uppercase text-procraft leading-tight italic">Заощаджуйте на паливі <br> <span class="text-action">та часі вже сьогодні!</span></h2>
+            <p class="text-xs font-bold text-gray-400 mt-4 uppercase">Оформіть заявку, а ми зробимо все інше</p>
+        </div>
+
+        <div class="bg-procraft p-1 rounded-3xl shadow-2xl">
+            <div class="bg-white p-8 rounded-[22px] border-4 border-gray-50">
+                <form action="crm.php" method="POST" class="space-y-6">
+                    <input type="hidden" name="product_id" value="397">
+                    <input type="hidden" name="price" value="1995">
+                    
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-gray-400 mb-2 ml-1">Ваше Прізвище та Ім'я</label>
+                        <input type="text" name="name" placeholder="Олександр Петренко" required
+                               class="w-full h-15 bg-gray-50 p-5 rounded-2xl outline-none font-black text-lg focus:ring-4 focus:ring-action/10 border-2 border-transparent focus:border-action transition-all shadow-inner">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-gray-400 mb-2 ml-1">Контактний Номер</label>
+                        <input type="tel" name="phone" placeholder="0XXXXXXXXX" required
+                               class="w-full h-15 bg-gray-50 p-5 rounded-2xl outline-none font-black text-lg focus:ring-4 focus:ring-action/10 border-2 border-transparent focus:border-action transition-all shadow-inner">
+                    </div>
+
+                    <button type="submit" class="w-full bg-action text-white font-black py-6 rounded-2xl text-xl uppercase tracking-widest shadow-2xl pulse-btn active:scale-95 transition-transform">
+                        ОФОРМИТИ ЗАМОВЛЕННЯ
+                    </button>
+                    
+                    <div class="grid grid-cols-3 gap-2 pt-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-truck-fast text-procraft text-lg mb-2"></i>
+                            <div class="text-[8px] font-black uppercase text-gray-400 tracking-tighter">Доставка 1-2 дні</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-hand-holding-dollar text-procraft text-lg mb-2"></i>
+                            <div class="text-[8px] font-black uppercase text-gray-400 tracking-tighter">Накладений платіж</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-shield-halved text-procraft text-lg mb-2"></i>
+                            <div class="text-[8px] font-black uppercase text-gray-400 tracking-tighter">Гарантія 24 міс.</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-procraft text-center">
+        <div class="text-[10px] font-black text-white/20 uppercase tracking-[0.5em] mb-4 italic">PROCRAFT OFFICIAL DEALER</div>
+        <div class="flex justify-center gap-6 text-[8px] font-black text-green-100/30 uppercase tracking-widest">
+            <a href="policy.html" class="hover:text-action">Політика конфіденційності</a>
+            <a href="policy.html" class="hover:text-action">Виконання замовлення</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Sticky Header Toggle
+        const header = document.getElementById('sticky-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                header.classList.add('visible');
+            } else {
+                header.classList.remove('visible');
+            }
+        });
+
+        // Timer Logic
+        let count = 899;
+        const timerEl = document.getElementById('timer');
+        setInterval(() => {
+            if (count > 0) {
+                count--;
+                let m = Math.floor(count / 60);
+                let s = count % 60;
+                timerEl.innerText = (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+            }
+        }, 1000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+    <script>
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (!scrollTimeout) {
+                window.requestAnimationFrame(() => {
+                    const stickyCta = document.getElementById('sticky-cta');
+                    if (window.scrollY > 500) {
+                        stickyCta.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        stickyCta.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                    scrollTimeout = false;
+                });
+                scrollTimeout = true;
+            }
+        }, { passive: true });
+
+        // Autoplay videos on scroll using Intersection Observer
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.play().catch(error => console.log("Autoplay prevented:", error));
+                    } else {
+                        entry.target.pause();
+                    }
+                });
+            }, observerOptions);
+
+            videos.forEach(video => {
+                observer.observe(video);
+                video.muted = true;
+                video.setAttribute('playsinline', '');
+            });
+        });
+    </script>
+    <script>
+      setTimeout(function() {
+        var gtm = document.createElement('script');
+        gtm.async = true;
+        gtm.src = 'https://www.googletagmanager.com/gtag/js?id=G-MV1H2F0N3B';
+        document.body.appendChild(gtm);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-MV1H2F0N3B");
+
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1579006016495944');
+        fbq('track', 'PageView');
+
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "w8mupgpghx");
+      }, 3500);
+    </script>
+    <noscript><img loading="lazy" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1579006016495944&ev=PageView&noscript=1"/></noscript>
+    <script src="./order.js" defer></script>
+</body>
+</html>
